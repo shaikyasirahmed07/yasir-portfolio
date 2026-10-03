@@ -28,7 +28,7 @@ export default function Home() {
       className="text-lg font-semibold tracking-tight"
       onClick={() => setMobileMenuOpen(false)}
     >
-      Yasir<span className="text-blue-400">.</span>
+      Yasir Ahmed Shaik<span className="text-blue-400">.</span>
     </a>
 
 
@@ -272,7 +272,7 @@ export default function Home() {
 
               {/* Resume */}
               <a
-                href="/resume.pdf"
+                href="/Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
@@ -441,304 +441,364 @@ export default function Home() {
       </section>
 
 
-      {/* =====================================================
+{/* =================================================
     ABOUT
-===================================================== */}
+================================================= */}
 <section
   id="about"
-  className="relative border-t border-white/10 py-32"
+  className="mx-auto max-w-6xl px-6 py-32"
 >
-  <div className="mx-auto max-w-6xl px-6">
+  <motion.div
+    initial={{ opacity: 0, y: 25 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+  >
 
-    {/* Section heading */}
-    <motion.div
-      initial={{ opacity: 0, y: 25 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6 }}
-    >
-      <p className="text-sm font-medium uppercase tracking-[0.2em] text-blue-400">
-        About Me
-      </p>
+    {/* Section label */}
+    <p className="text-sm uppercase tracking-[0.2em] text-blue-400">
+      About Me
+    </p>
 
-      <h2 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl">
-        Turning ideas into practical software.
-      </h2>
-    </motion.div>
+    {/* Heading */}
+    <h2 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl">
+      Software engineer who enjoys building practical solutions.
+    </h2>
 
+    {/* Main content */}
+    <div className="mt-10 grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
 
-    {/* About content */}
-    <div className="mt-16 grid gap-12 md:grid-cols-[1.4fr_0.6fr]">
+      {/* About text */}
+      <div className="space-y-6 text-lg leading-8 text-gray-400">
 
-      {/* Main description */}
-      <motion.div
-        initial={{ opacity: 0, x: -25 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6 }}
-        className="space-y-6"
-      >
-        <p className="text-lg leading-8 text-gray-400">
-          I'm a Computer Science and Engineering graduate with a
-          strong interest in software development, full-stack
-          applications, backend systems, and emerging technologies.
+        <p>
+          I'm a Computer Science and Engineering graduate with
+          professional experience as an Associate Process Executive
+          at upGrad Education Pvt. Ltd., working on a client project
+          for NVIDIA Graphics Private Limited.
         </p>
 
-        <p className="text-lg leading-8 text-gray-400">
-          I have hands-on experience working with technologies such
-          as Java, Python, JavaScript, React, Spring Boot, Django,
-          SQL, and modern databases. I've also worked on projects
-          involving blockchain and full-stack application development.
+        <p>
+          My technical interests are centered around full-stack
+          development, backend systems, databases, and building
+          software that solves practical problems.
         </p>
 
-        <p className="text-lg leading-8 text-gray-400">
-          Currently, I'm working as an Associate Process Executive
-          at upGrad Education Pvt. Ltd. on a client project for
-          NVIDIA Graphics Private Limited.
+        <p>
+          I enjoy working across the stack—from designing user
+          interfaces and developing APIs to working with databases,
+          application logic, and deployment workflows.
         </p>
 
-        <p className="text-lg leading-8 text-gray-400">
-          I enjoy learning new technologies, solving technical
-          problems, and building software that is useful beyond
-          just a demo.
-        </p>
-      </motion.div>
+      </div>
 
 
       {/* Quick facts */}
-      <motion.div
-        initial={{ opacity: 0, x: 25 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6, delay: 0.1 }}
-        className="space-y-4"
-      >
+      <div className="space-y-4">
 
         {/* Education */}
-        <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-white/20">
-          <p className="text-xs uppercase tracking-[0.18em] text-gray-500">
+        <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
+          <p className="text-xs uppercase tracking-[0.15em] text-gray-600">
             Education
           </p>
 
-          <p className="mt-3 font-semibold text-white">
+          <p className="mt-2 font-medium text-gray-200">
             B.Tech — Computer Science & Engineering
           </p>
 
           <p className="mt-1 text-sm text-gray-500">
-            Koneru Lakshmaiah University
-          </p>
-
-          <p className="mt-3 text-sm text-blue-400">
-            CGPA 9.11 / 10
+            KL University
           </p>
         </div>
 
 
         {/* Current role */}
-        <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-white/20">
-          <p className="text-xs uppercase tracking-[0.18em] text-gray-500">
-            Current Role
+        <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
+          <p className="text-xs uppercase tracking-[0.15em] text-gray-600">
+            Currently
           </p>
 
-          <p className="mt-3 font-semibold text-white">
+          <p className="mt-2 font-medium text-gray-200">
             Associate Process Executive
           </p>
 
           <p className="mt-1 text-sm text-gray-500">
             upGrad Education Pvt. Ltd.
           </p>
-
-          <p className="mt-3 text-sm text-blue-400">
-            Client Project — NVIDIA
-          </p>
         </div>
 
 
         {/* Focus */}
-        <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-white/20">
-          <p className="text-xs uppercase tracking-[0.18em] text-gray-500">
+        <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
+          <p className="text-xs uppercase tracking-[0.15em] text-gray-600">
             Focus
           </p>
 
-          <p className="mt-3 text-sm leading-6 text-gray-400">
-            Full-Stack Development · Backend Engineering ·
-            Software Development
+          <p className="mt-2 font-medium text-gray-200">
+            Full-Stack Development
+          </p>
+
+          <p className="mt-1 text-sm text-gray-500">
+            Backend Systems · APIs · Databases
           </p>
         </div>
 
-      </motion.div>
+      </div>
 
     </div>
-  </div>
+
+  </motion.div>
 </section>
 
-      {/* =====================================================
+{/* =================================================
     EXPERIENCE
-===================================================== */}
+================================================= */}
 <section
   id="experience"
-  className="relative border-t border-white/10 py-32"
+  className="mx-auto max-w-6xl px-6 py-32"
 >
-  <div className="mx-auto max-w-6xl px-6">
+  {/* Section heading */}
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+  >
+    <p className="text-sm uppercase tracking-[0.2em] text-blue-400">
+      Experience
+    </p>
 
-    {/* Section heading */}
-    <motion.div
-      initial={{ opacity: 0, y: 25 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6 }}
-    >
-      <p className="text-sm font-medium uppercase tracking-[0.2em] text-blue-400">
-        Experience
-      </p>
+    <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
+      Professional experience.
+    </h2>
 
-      <h2 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl">
-        Where I've worked.
-      </h2>
-    </motion.div>
-
-
-    {/* Experience card */}
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.7 }}
-      className="mt-16"
-    >
-      <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02]">
-
-        {/* Top accent */}
-        <div className="h-px w-full bg-gradient-to-r from-blue-400/70 via-blue-400/20 to-transparent" />
-
-        <div className="p-7 sm:p-10">
-
-          {/* Header */}
-          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-start">
-
-            <div>
-              <p className="text-sm text-blue-400">
-                Aug 2026 — Present
-              </p>
-
-              <h3 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
-                Associate Process Executive
-              </h3>
-
-              <p className="mt-2 text-lg text-gray-400">
-                upGrad Education Pvt. Ltd.
-              </p>
-            </div>
+    <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-400">
+      Experience working in a structured, quality-focused
+      professional environment while contributing to
+      technology-driven client operations.
+    </p>
+  </motion.div>
 
 
-            {/* Client badge */}
-            <div className="w-fit rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-gray-400">
-              Client Project · NVIDIA Graphics
-            </div>
+  {/* Experience card */}
+  <motion.article
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.2 }}
+    transition={{ duration: 0.7 }}
+    className="
+      group
+      relative
+      mt-16
+      overflow-hidden
+      rounded-3xl
+      border
+      border-white/10
+      bg-white/[0.02]
+      p-7
+      transition-all
+      duration-500
+      hover:border-blue-400/30
+      sm:p-10
+    "
+  >
+
+    {/* Background glow */}
+    <div
+      className="
+        pointer-events-none
+        absolute
+        -right-32
+        -top-32
+        h-80
+        w-80
+        rounded-full
+        bg-blue-500/5
+        blur-[100px]
+        transition-all
+        duration-500
+        group-hover:bg-blue-500/10
+      "
+    />
+
+    <div className="relative">
+
+      {/* Company + date */}
+      <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+
+        <div>
+
+          <div className="flex flex-wrap items-center gap-3">
+
+            <h3 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+              Associate Process Executive
+            </h3>
+
+            <span
+              className="
+                rounded-full
+                border
+                border-emerald-400/20
+                bg-emerald-400/5
+                px-3
+                py-1
+                text-xs
+                font-medium
+                text-emerald-400
+              "
+            >
+              Current
+            </span>
 
           </div>
 
+          <p className="mt-2 text-lg text-blue-400">
+            upGrad Education Pvt. Ltd.
+          </p>
 
-          {/* Divider */}
-          <div className="my-8 h-px bg-white/10" />
-
-
-          {/* Content */}
-          <div className="grid gap-10 md:grid-cols-[1fr_0.35fr]">
-
-            {/* Responsibilities */}
-            <div>
-              <p className="text-xs font-medium uppercase tracking-[0.18em] text-gray-500">
-                Role
-              </p>
-
-              <div className="mt-5 space-y-5">
-
-                <div className="flex gap-4">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" />
-
-                  <p className="leading-7 text-gray-400">
-                    Working on a client project for NVIDIA Graphics
-                    Private Limited as an Associate Process Executive.
-                  </p>
-                </div>
-
-                <div className="flex gap-4">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" />
-
-                  <p className="leading-7 text-gray-400">
-                    Handle assigned project responsibilities while
-                    following defined processes, quality standards,
-                    and timelines.
-                  </p>
-                </div>
-
-                <div className="flex gap-4">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" />
-
-                  <p className="leading-7 text-gray-400">
-                    Maintain accuracy and consistency while completing
-                    assigned tasks and deliverables.
-                  </p>
-                </div>
-
-                <div className="flex gap-4">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" />
-
-                  <p className="leading-7 text-gray-400">
-                    Collaborate with team members to meet project
-                    requirements and operational targets.
-                  </p>
-                </div>
-
-              </div>
-            </div>
+        </div>
 
 
-            {/* Quick information */}
-            <div className="space-y-6">
+        <div className="text-sm text-gray-500 sm:text-right">
+          <p>2026 — Present</p>
+          <p className="mt-1">
+            Remote
+          </p>
+        </div>
 
-              <div>
-                <p className="text-xs uppercase tracking-[0.18em] text-gray-500">
-                  Company
-                </p>
-
-                <p className="mt-2 text-sm text-gray-300">
-                  upGrad Education Pvt. Ltd.
-                </p>
-              </div>
+      </div>
 
 
-              <div>
-                <p className="text-xs uppercase tracking-[0.18em] text-gray-500">
-                  Client
-                </p>
+      {/* Client */}
+      <div
+        className="
+          mt-8
+          rounded-2xl
+          border
+          border-white/10
+          bg-white/[0.02]
+          p-5
+        "
+      >
+        <p className="text-xs uppercase tracking-[0.18em] text-gray-600">
+          Client Project
+        </p>
 
-                <p className="mt-2 text-sm text-gray-300">
-                  NVIDIA Graphics Private Limited
-                </p>
-              </div>
+        <p className="mt-2 text-lg font-medium text-gray-200">
+          NVIDIA Graphics Private Limited
+        </p>
+
+        <p className="mt-2 text-sm leading-6 text-gray-500">
+          Working on a client project in a structured,
+          quality-focused professional environment.
+        </p>
+      </div>
 
 
-              <div>
-                <p className="text-xs uppercase tracking-[0.18em] text-gray-500">
-                  Position
-                </p>
+      {/* Responsibilities */}
+      <div className="mt-10">
 
-                <p className="mt-2 text-sm text-gray-300">
-                  Associate Process Executive
-                </p>
-              </div>
+        <p className="text-sm uppercase tracking-[0.18em] text-gray-600">
+          Responsibilities
+        </p>
 
-            </div>
+        <div className="mt-5 grid gap-4 sm:grid-cols-2">
 
+          <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
+            <h4 className="font-medium text-gray-200">
+              Quality-focused operations
+            </h4>
+
+            <p className="mt-2 text-sm leading-6 text-gray-500">
+              Performing structured tasks with attention to
+              accuracy, consistency, and quality requirements.
+            </p>
+          </div>
+
+
+          <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
+            <h4 className="font-medium text-gray-200">
+              Data & visual processing
+            </h4>
+
+            <p className="mt-2 text-sm leading-6 text-gray-500">
+              Working with visual data and following defined
+              guidelines to produce reliable and consistent
+              results.
+            </p>
+          </div>
+
+
+          <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
+            <h4 className="font-medium text-gray-200">
+              Process adherence
+            </h4>
+
+            <p className="mt-2 text-sm leading-6 text-gray-500">
+              Following established workflows, instructions,
+              quality standards, and project requirements.
+            </p>
+          </div>
+
+
+          <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
+            <h4 className="font-medium text-gray-200">
+              Team collaboration
+            </h4>
+
+            <p className="mt-2 text-sm leading-6 text-gray-500">
+              Collaborating within a professional project
+              environment while meeting assigned timelines
+              and operational requirements.
+            </p>
           </div>
 
         </div>
-      </div>
-    </motion.div>
 
-  </div>
+      </div>
+
+
+      {/* Skills gained */}
+      <div className="mt-10">
+
+        <p className="text-sm uppercase tracking-[0.18em] text-gray-600">
+          Professional strengths
+        </p>
+
+        <div className="mt-5 flex flex-wrap gap-2">
+
+          {[
+            "Attention to Detail",
+            "Quality Assurance",
+            "Data Processing",
+            "Problem Solving",
+            "Process Discipline",
+            "Team Collaboration",
+            "Time Management",
+          ].map((skill) => (
+            <span
+              key={skill}
+              className="
+                rounded-lg
+                border
+                border-white/10
+                bg-white/[0.03]
+                px-3
+                py-1.5
+                text-xs
+                text-gray-400
+              "
+            >
+              {skill}
+            </span>
+          ))}
+
+        </div>
+
+      </div>
+
+    </div>
+  </motion.article>
 </section>
 
 {/* =====================================================
@@ -772,204 +832,392 @@ export default function Home() {
     </motion.div>
 
 
-    {/* =================================================
-        FEATURED PROJECT — REPO LENS
-    ================================================= */}
-    <motion.article
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.7 }}
-      className="
-        group
-        relative
-        mt-16
-        overflow-hidden
-        rounded-3xl
-        border
-        border-white/10
-        bg-white/[0.02]
-        transition-all
-        duration-500
-        hover:border-blue-400/30
-      "
-    >
+   {/* =================================================
+    FEATURED PROJECT — REPO LENS
+================================================= */}
+<motion.article
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.7 }}
+  className="group relative mt-16 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] transition-all duration-500 hover:border-blue-400/30"
+>
+  {/* Background glow */}
+  <div className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-blue-500/10 blur-[100px] transition-all duration-500 group-hover:bg-blue-500/15" />
 
-      {/* Background glow */}
-      <div
-        className="
-          pointer-events-none
-          absolute
-          -right-32
-          -top-32
-          h-80
-          w-80
-          rounded-full
-          bg-blue-500/10
-          blur-[100px]
-          transition-opacity
-          duration-500
-          group-hover:bg-blue-500/15
-        "
-      />
+  <div className="relative grid gap-10 p-7 sm:p-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
 
-      <div className="relative grid gap-10 p-7 sm:p-10 lg:grid-cols-[1.2fr_0.8fr]">
+    {/* PROJECT INFORMATION */}
+    <div>
 
-        {/* Project information */}
-        <div>
+      {/* Status */}
+      <div className="flex items-center gap-3">
+        <span className="rounded-full border border-blue-400/20 bg-blue-400/5 px-3 py-1 text-xs font-medium text-blue-400">
+          Currently in development
+        </span>
 
-          <div className="flex items-center gap-3">
-            <span className="rounded-full border border-blue-400/20 bg-blue-400/5 px-3 py-1 text-xs font-medium text-blue-400">
-              Featured Project
-            </span>
+        <span className="text-sm text-gray-600">
+          01
+        </span>
+      </div>
 
-            <span className="text-sm text-gray-600">
-              01
-            </span>
+      {/* Title */}
+      <h3 className="mt-6 text-3xl font-semibold tracking-tight sm:text-4xl">
+        RepoLens
+      </h3>
+
+      {/* Description */}
+      <p className="mt-4 max-w-xl text-lg leading-8 text-gray-400">
+        A developer-focused platform for analyzing GitHub
+        repositories and turning complex codebases into
+        easier-to-understand project insights.
+      </p>
+
+      {/* Technologies */}
+      <div className="mt-7 flex flex-wrap gap-2">
+        {[
+          "Next.js",
+          "TypeScript",
+          "React",
+          "GitHub API",
+          "AI",
+          "Tailwind CSS",
+        ].map((technology) => (
+          <span
+            key={technology}
+            className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs text-gray-400 transition-colors hover:border-white/20 hover:text-white"
+          >
+            {technology}
+          </span>
+        ))}
+      </div>
+
+      {/* Development status */}
+      <div className="mt-9 flex items-center gap-3">
+        <span className="relative flex h-2.5 w-2.5">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-60" />
+          <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-blue-400" />
+        </span>
+
+        <span className="text-sm text-gray-500">
+          Active development
+        </span>
+      </div>
+
+    </div>
+
+    {/* PROJECT PREVIEW */}
+    <div className="relative min-h-[280px] overflow-hidden rounded-2xl border border-white/10 bg-[#080808]">
+
+      {/* Browser header */}
+      <div className="flex h-10 items-center gap-2 border-b border-white/10 px-4">
+        <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+        <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
+        <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
+
+        <div className="ml-3 flex-1 rounded-md border border-white/5 bg-white/[0.03] px-3 py-1 text-[10px] text-gray-600">
+          repolens
+        </div>
+      </div>
+
+      {/* Mock interface */}
+      <div className="p-5">
+
+        {/* Header */}
+        <div className="flex items-center justify-between">
+          <div>
+            <div className="h-3 w-24 rounded bg-white/10" />
+            <div className="mt-2 h-2 w-36 rounded bg-white/5" />
           </div>
 
+          <div className="h-7 w-20 rounded-lg bg-blue-500/10" />
+        </div>
 
-          <h3 className="mt-6 text-3xl font-semibold tracking-tight sm:text-4xl">
-            RepoLens
-          </h3>
+        {/* Main interface */}
+        <div className="mt-6 grid grid-cols-[0.35fr_0.65fr] gap-3">
 
+          {/* File tree */}
+          <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
+            <div className="h-2 w-16 rounded bg-white/10" />
 
-          <p className="mt-4 max-w-xl text-lg leading-8 text-gray-400">
-            AI-powered repository intelligence that helps developers
-            understand GitHub repositories through architecture
-            visualization, documentation, and codebase insights.
-          </p>
-
-
-          {/* Tech stack */}
-          <div className="mt-7 flex flex-wrap gap-2">
-            {[
-              "Next.js",
-              "TypeScript",
-              "React",
-              "GitHub API",
-              "AI",
-              "Tailwind CSS",
-            ].map((tech) => (
-              <span
-                key={tech}
-                className="
-                  rounded-full
-                  border
-                  border-white/10
-                  bg-white/[0.03]
-                  px-3
-                  py-1.5
-                  text-xs
-                  text-gray-400
-                "
-              >
-                {tech}
-              </span>
-            ))}
+            <div className="mt-4 space-y-3">
+              <div className="h-2 w-20 rounded bg-white/5" />
+              <div className="ml-3 h-2 w-16 rounded bg-white/5" />
+              <div className="ml-3 h-2 w-20 rounded bg-blue-400/20" />
+              <div className="ml-3 h-2 w-14 rounded bg-white/5" />
+              <div className="h-2 w-24 rounded bg-white/5" />
+            </div>
           </div>
 
+          {/* Architecture preview */}
+          <div className="relative min-h-[150px] rounded-xl border border-white/5 bg-white/[0.02] p-4">
 
-          {/* Links */}
-          <div className="mt-9 flex flex-wrap gap-4">
+            <div className="h-2 w-20 rounded bg-white/10" />
 
-            <a
-              href="#"
-              className="
-                inline-flex
-                items-center
-                gap-2
-                rounded-full
-                bg-white
-                px-5
-                py-2.5
-                text-sm
-                font-medium
-                text-black
-                transition
-                hover:bg-gray-200
-              "
-            >
-              View Project
-              <ArrowUpRight size={16} />
-            </a>
+            {/* Architecture nodes */}
+            <div className="absolute left-5 top-16 h-8 w-16 rounded-lg border border-blue-400/20 bg-blue-400/5" />
 
-            <a
-              href="#"
-              className="
-                inline-flex
-                items-center
-                gap-2
-                rounded-full
-                border
-                border-white/10
-                px-5
-                py-2.5
-                text-sm
-                font-medium
-                text-gray-300
-                transition
-                hover:border-white/25
-                hover:bg-white/5
-              "
-            >
-              GitHub
-            </a>
+            <div className="absolute left-1/2 top-10 h-8 w-16 -translate-x-1/2 rounded-lg border border-white/10 bg-white/[0.03]" />
+
+            <div className="absolute right-5 top-16 h-8 w-16 rounded-lg border border-white/10 bg-white/[0.03]" />
+
+            <div className="absolute bottom-6 left-1/2 h-8 w-16 -translate-x-1/2 rounded-lg border border-white/10 bg-white/[0.03]" />
+
+            {/* Connections */}
+            <div className="absolute left-[27%] top-[75px] h-px w-[25%] bg-white/10" />
+
+            <div className="absolute right-[27%] top-[75px] h-px w-[25%] bg-white/10" />
+
+            <div className="absolute left-1/2 top-[75px] h-[55px] w-px bg-white/10" />
 
           </div>
 
         </div>
+      </div>
+
+      {/* Preview glow */}
+      <div className="pointer-events-none absolute bottom-0 left-1/2 h-32 w-64 -translate-x-1/2 rounded-full bg-blue-500/5 blur-3xl" />
+
+    </div>
+  </div>
+</motion.article>
+
+{/* =================================================
+    OTHER PROJECTS
+================================================= */}
+    <div className="mt-6 grid gap-6 md:grid-cols-2">
 
 
-        {/* Project visual */}
-        <div
-          className="
-            flex
-            min-h-[280px]
-            items-center
-            justify-center
-            rounded-2xl
-            border
-            border-white/10
-            bg-[#080808]
-            p-6
-          "
+      {/* =================================================
+    PROJECT — DAKSHKRISHI
+================================================= */}
+<motion.article
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.7 }}
+  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-emerald-400/30 sm:p-10"
+>
+  {/* Background glow */}
+  <div className="pointer-events-none absolute -bottom-32 -right-32 h-80 w-80 rounded-full bg-emerald-500/5 blur-[100px] transition-all duration-500 group-hover:bg-emerald-500/10" />
+
+  <div className="relative">
+
+    {/* Header */}
+    <div className="flex items-center justify-between gap-4">
+      <span className="rounded-full border border-emerald-400/20 bg-emerald-400/5 px-3 py-1 text-xs font-medium text-emerald-400">
+        Full-Stack Project
+      </span>
+
+      <span className="text-sm text-gray-600">
+        02
+      </span>
+    </div>
+
+    {/* Title */}
+    <h3 className="mt-6 text-3xl font-semibold tracking-tight sm:text-4xl">
+      DakshKrishi
+    </h3>
+
+    {/* Description */}
+    <p className="mt-4 max-w-3xl text-lg leading-8 text-gray-400">
+      A full-stack crop recommendation platform designed to help
+      farmers make better crop decisions using agricultural data
+      and recommendation-based insights.
+    </p>
+
+    {/* Tech stack */}
+    <div className="mt-7 flex flex-wrap gap-2">
+      {[
+        "React",
+        "Spring Boot",
+        "PostgreSQL",
+        "REST API",
+        "Java",
+      ].map((technology) => (
+        <span
+          key={technology}
+          className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs text-gray-400 transition-colors hover:border-white/20 hover:text-white"
         >
+          {technology}
+        </span>
+      ))}
+    </div>
 
-          <div className="w-full max-w-sm">
+    {/* Project visual */}
+    <div className="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-[#080808]">
 
-            {/* Fake application window */}
-            <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0d0d0d] shadow-2xl">
+      {/* Mock dashboard header */}
+      <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
+        <div>
+          <div className="h-3 w-28 rounded bg-white/10" />
+          <div className="mt-2 h-2 w-40 rounded bg-white/5" />
+        </div>
 
-              {/* Window header */}
-              <div className="flex items-center gap-1.5 border-b border-white/10 px-4 py-3">
-                <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
-                <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
-                <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
-              </div>
+        <div className="h-7 w-24 rounded-lg bg-emerald-400/10" />
+      </div>
 
-              {/* Window body */}
-              <div className="p-5">
+      {/* Dashboard */}
+      <div className="grid gap-4 p-5 sm:grid-cols-3">
 
-                <div className="h-3 w-24 rounded bg-white/10" />
+        <div className="rounded-xl border border-white/5 bg-white/[0.02] p-5">
+          <div className="h-2 w-20 rounded bg-white/10" />
+          <div className="mt-5 h-10 w-16 rounded bg-emerald-400/10" />
+        </div>
 
-                <div className="mt-5 grid grid-cols-3 gap-3">
+        <div className="rounded-xl border border-white/5 bg-white/[0.02] p-5">
+          <div className="h-2 w-24 rounded bg-white/10" />
+          <div className="mt-5 h-10 w-20 rounded bg-white/5" />
+        </div>
 
-                  <div className="h-20 rounded-lg border border-white/10 bg-white/[0.02]" />
+        <div className="rounded-xl border border-white/5 bg-white/[0.02] p-5">
+          <div className="h-2 w-16 rounded bg-white/10" />
+          <div className="mt-5 h-10 w-24 rounded bg-white/5" />
+        </div>
 
-                  <div className="h-20 rounded-lg border border-blue-400/20 bg-blue-400/5" />
+      </div>
 
-                  <div className="h-20 rounded-lg border border-white/10 bg-white/[0.02]" />
+      {/* Recommendation panel */}
+      <div className="mx-5 mb-5 rounded-xl border border-emerald-400/10 bg-emerald-400/[0.03] p-5">
+        <div className="h-2 w-28 rounded bg-emerald-400/20" />
 
-                </div>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <span className="rounded-lg bg-white/[0.04] px-4 py-2 text-xs text-gray-500">
+            Crop Recommendation
+          </span>
 
-                <div className="mt-4 space-y-2">
-                  <div className="h-2 w-full rounded bg-white/5" />
-                  <div className="h-2 w-4/5 rounded bg-white/5" />
-                  <div className="h-2 w-3/5 rounded bg-white/5" />
-                </div>
+          <span className="rounded-lg bg-white/[0.04] px-4 py-2 text-xs text-gray-500">
+            Soil Analysis
+          </span>
 
-              </div>
+          <span className="rounded-lg bg-white/[0.04] px-4 py-2 text-xs text-gray-500">
+            Agricultural Insights
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    {/* Project links */}
+    <div className="mt-8 flex flex-wrap gap-4">
+
+      <a
+        href="#"
+        className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm font-medium text-gray-300 transition hover:border-white/20 hover:bg-white/5 hover:text-white"
+      >
+        GitHub
+      </a>
+
+      <span className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-gray-600">
+        Live demo coming soon
+      </span>
+
+    </div>
+
+  </div>
+</motion.article>
+
+{/* =================================================
+    PROJECT — WATER BILLING DAPP
+================================================= */}
+<motion.article
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.7 }}
+  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-purple-400/30 sm:p-10"
+>
+  {/* Background glow */}
+  <div className="pointer-events-none absolute -left-32 -top-32 h-80 w-80 rounded-full bg-purple-500/5 blur-[100px] transition-all duration-500 group-hover:bg-purple-500/10" />
+
+  <div className="relative">
+
+    {/* Header */}
+    <div className="flex items-center justify-between gap-4">
+      <span className="rounded-full border border-purple-400/20 bg-purple-400/5 px-3 py-1 text-xs font-medium text-purple-400">
+        Blockchain + Full-Stack
+      </span>
+
+      <span className="text-sm text-gray-600">
+        03
+      </span>
+    </div>
+
+    {/* Title */}
+    <h3 className="mt-6 text-3xl font-semibold tracking-tight sm:text-4xl">
+      Water Billing DApp
+    </h3>
+
+    {/* Description */}
+    <p className="mt-4 max-w-3xl text-lg leading-8 text-gray-400">
+      A decentralized water billing application that combines
+      blockchain technology with a modern web interface to
+      provide transparent and reliable billing transactions.
+    </p>
+
+    {/* Technology stack */}
+    <div className="mt-7 flex flex-wrap gap-2">
+      {[
+        "Solidity",
+        "React",
+        "Ethers.js",
+        "Blockchain",
+        "Smart Contracts",
+      ].map((technology) => (
+        <span
+          key={technology}
+          className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs text-gray-400 transition-colors hover:border-white/20 hover:text-white"
+        >
+          {technology}
+        </span>
+      ))}
+    </div>
+
+    {/* Project visual */}
+    <div className="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-[#080808]">
+
+      {/* Application header */}
+      <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
+        <div>
+          <div className="h-3 w-32 rounded bg-white/10" />
+          <div className="mt-2 h-2 w-44 rounded bg-white/5" />
+        </div>
+
+        <div className="rounded-lg border border-purple-400/10 bg-purple-400/5 px-3 py-2">
+          <div className="h-2 w-16 rounded bg-purple-400/20" />
+        </div>
+      </div>
+
+      {/* Billing dashboard */}
+      <div className="grid gap-4 p-5 sm:grid-cols-2">
+
+        {/* Customer information */}
+        <div className="rounded-xl border border-white/5 bg-white/[0.02] p-5">
+
+          <div className="h-2 w-28 rounded bg-white/10" />
+
+          <div className="mt-5 space-y-3">
+            <div className="h-2 w-36 rounded bg-white/5" />
+            <div className="h-2 w-28 rounded bg-white/5" />
+            <div className="h-2 w-40 rounded bg-white/5" />
+          </div>
+
+        </div>
+
+        {/* Bill information */}
+        <div className="rounded-xl border border-white/5 bg-white/[0.02] p-5">
+
+          <div className="h-2 w-20 rounded bg-white/10" />
+
+          <div className="mt-5 flex items-end justify-between">
+
+            <div>
+              <div className="h-2 w-16 rounded bg-white/5" />
+              <div className="mt-3 h-8 w-24 rounded bg-purple-400/10" />
+            </div>
+
+            <div className="rounded-lg bg-purple-400/10 px-3 py-2">
+              <div className="h-2 w-12 rounded bg-purple-400/20" />
             </div>
 
           </div>
@@ -977,110 +1225,264 @@ export default function Home() {
         </div>
 
       </div>
-    </motion.article>
 
+      {/* Blockchain transaction */}
+      <div className="mx-5 mb-5 rounded-xl border border-purple-400/10 bg-purple-400/[0.03] p-5">
 
-    {/* =================================================
-        OTHER PROJECTS
-    ================================================= */}
-    <div className="mt-6 grid gap-6 md:grid-cols-2">
+        <div className="flex items-center justify-between gap-4">
 
+          <div>
+            <div className="h-2 w-32 rounded bg-purple-400/20" />
+            <div className="mt-3 h-2 w-48 rounded bg-white/5" />
+          </div>
 
-      {/* DAKSHKRISHI */}
-      <ProjectCard
-        number="02"
-        title="DakshKrishi"
-        description="Full-stack crop recommendation system designed to provide crop suggestions using agricultural and environmental data."
-        technologies={[
-          "React",
-          "Spring Boot",
-          "PostgreSQL",
-        ]}
-      />
+          <span className="rounded-full border border-purple-400/10 px-3 py-1 text-[10px] text-purple-400">
+            Verified
+          </span>
 
+        </div>
 
-      {/* WATER BILLING DAPP */}
-      <ProjectCard
-        number="03"
-        title="Water Billing DApp"
-        description="Blockchain-based water billing application built to explore decentralized transactions and smart contract integration."
-        technologies={[
-          "Solidity",
-          "React",
-          "Ethers.js",
-        ]}
-      />
+      </div>
 
+    </div>
 
-      {/* BRODOAK HOTELS */}
-      <ProjectCard
-        number="04"
-        title="Brodoak Hotels"
-        description="Hotel management and booking platform focused on creating a practical full-stack web experience."
-        technologies={[
-          "Django",
-          "Python",
-          "PostgreSQL",
-        ]}
-      />
+    {/* Project links */}
+    <div className="mt-8 flex flex-wrap gap-4">
+
+      <a
+        href="#"
+        className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm font-medium text-gray-300 transition hover:border-white/20 hover:bg-white/5 hover:text-white"
+      >
+        GitHub
+      </a>
+
+      <span className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-gray-600">
+        Blockchain project
+      </span>
+
+    </div>
+
+  </div>
+</motion.article>
+
+{/* =================================================
+    PROJECT — BRODOAK HOTELS
+================================================= */}
+<motion.article
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.7 }}
+  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-orange-400/30 sm:p-10"
+>
+  {/* Background glow */}
+  <div className="pointer-events-none absolute -bottom-32 -left-32 h-80 w-80 rounded-full bg-orange-500/5 blur-[100px] transition-all duration-500 group-hover:bg-orange-500/10" />
+
+  <div className="relative">
+
+    {/* Header */}
+    <div className="flex items-center justify-between gap-4">
+      <span className="rounded-full border border-orange-400/20 bg-orange-400/5 px-3 py-1 text-xs font-medium text-orange-400">
+        Web Development
+      </span>
+
+      <span className="text-sm text-gray-600">
+        04
+      </span>
+    </div>
+
+    {/* Title */}
+    <h3 className="mt-6 text-3xl font-semibold tracking-tight sm:text-4xl">
+      Brodoak Hotels
+    </h3>
+
+    {/* Description */}
+    <p className="mt-4 max-w-3xl text-lg leading-8 text-gray-400">
+      A modern hotel booking and hospitality website focused on
+      providing a clean browsing experience for discovering rooms,
+      exploring hotel information, and managing reservations.
+    </p>
+
+    {/* Technology stack */}
+    <div className="mt-7 flex flex-wrap gap-2">
+      {[
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Responsive Design",
+        "Web Development",
+      ].map((technology) => (
+        <span
+          key={technology}
+          className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs text-gray-400 transition-colors hover:border-white/20 hover:text-white"
+        >
+          {technology}
+        </span>
+      ))}
+    </div>
+
+    {/* Website preview */}
+    <div className="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-[#080808]">
+
+      {/* Browser header */}
+      <div className="flex h-10 items-center gap-2 border-b border-white/10 px-4">
+
+        <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+        <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
+        <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
+
+        <div className="ml-3 flex-1 rounded-md border border-white/5 bg-white/[0.03] px-3 py-1 text-[10px] text-gray-600">
+          brodoak hotels
+        </div>
+
+      </div>
+
+      {/* Website interface */}
+      <div className="p-5">
+
+        {/* Navigation */}
+        <div className="flex items-center justify-between">
+
+          <div className="h-3 w-24 rounded bg-orange-400/10" />
+
+          <div className="hidden gap-4 sm:flex">
+            <span className="h-2 w-10 rounded bg-white/5" />
+            <span className="h-2 w-10 rounded bg-white/5" />
+            <span className="h-2 w-10 rounded bg-white/5" />
+          </div>
+
+        </div>
+
+        {/* Hero */}
+        <div className="mt-6 overflow-hidden rounded-xl border border-white/5 bg-white/[0.02]">
+
+          <div className="relative h-40 bg-gradient-to-br from-orange-400/10 via-white/[0.02] to-transparent">
+
+            <div className="absolute inset-x-6 bottom-6">
+
+              <div className="h-3 w-40 rounded bg-white/10" />
+
+              <div className="mt-3 h-2 w-56 rounded bg-white/5" />
+
+              <div className="mt-5 h-8 w-28 rounded-lg bg-orange-400/10" />
+
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Hotel cards */}
+        <div className="mt-4 grid gap-3 sm:grid-cols-3">
+
+          <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
+
+            <div className="h-16 rounded-lg bg-white/[0.03]" />
+
+            <div className="mt-3 h-2 w-20 rounded bg-white/10" />
+
+            <div className="mt-2 h-2 w-14 rounded bg-white/5" />
+
+          </div>
+
+          <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
+
+            <div className="h-16 rounded-lg bg-white/[0.03]" />
+
+            <div className="mt-3 h-2 w-24 rounded bg-white/10" />
+
+            <div className="mt-2 h-2 w-16 rounded bg-white/5" />
+
+          </div>
+
+          <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
+
+            <div className="h-16 rounded-lg bg-white/[0.03]" />
+
+            <div className="mt-3 h-2 w-20 rounded bg-white/10" />
+
+            <div className="mt-2 h-2 w-12 rounded bg-white/5" />
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    {/* Project links */}
+    <div className="mt-8 flex flex-wrap gap-4">
+
+      <a
+        href="#"
+        className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm font-medium text-gray-300 transition hover:border-white/20 hover:bg-white/5 hover:text-white"
+      >
+        GitHub
+      </a>
+
+      <span className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm text-gray-600">
+        Web Project
+      </span>
+
+    </div>
+
+  </div>
+</motion.article>
 
     </div>
 
   </div>
 </section>
 
-{/* =====================================================
+{/* =================================================
     SKILLS
-===================================================== */}
+================================================= */}
 <section
   id="skills"
-  className="relative border-t border-white/10 py-32"
+  className="mx-auto max-w-6xl px-6 py-32"
 >
-  <div className="mx-auto max-w-6xl px-6">
+  <motion.div
+    initial={{ opacity: 0, y: 25 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+  >
+    {/* Section heading */}
+    <p className="text-sm uppercase tracking-[0.2em] text-blue-400">
+      Skills
+    </p>
 
-    {/* Heading */}
-    <motion.div
-      initial={{ opacity: 0, y: 25 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6 }}
-    >
-      <p className="text-sm font-medium uppercase tracking-[0.2em] text-blue-400">
-        Technical Skills
-      </p>
+    <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
+      Tools I use to build.
+    </h2>
 
-      <h2 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl">
-        Tools I use to build.
-      </h2>
-
-      <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-500">
-        A practical technology stack built through projects,
-        coursework, experimentation, and professional experience.
-      </p>
-    </motion.div>
+    <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-400">
+      A combination of programming languages, frameworks,
+      databases, and development tools I've worked with across
+      academic, personal, and professional projects.
+    </p>
 
 
-    {/* Skills grid */}
-    <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    {/* Skill categories */}
+    <div className="mt-16 grid gap-5 md:grid-cols-2">
 
       {/* Languages */}
       <SkillGroup
         title="Languages"
-        description="Core programming languages"
         skills={[
           "Java",
           "Python",
           "JavaScript",
+          "TypeScript",
           "C",
           "SQL",
         ]}
       />
 
-
       {/* Frontend */}
       <SkillGroup
         title="Frontend"
-        description="Building modern interfaces"
         skills={[
           "React",
           "Next.js",
@@ -1090,224 +1492,335 @@ export default function Home() {
         ]}
       />
 
-
       {/* Backend */}
       <SkillGroup
         title="Backend"
-        description="APIs and server-side development"
         skills={[
           "Spring Boot",
-          "Django",
-          "Flask",
           "Node.js",
           "Express.js",
-        ]}
-      />
-
-
-      {/* Databases */}
-      <SkillGroup
-        title="Databases"
-        description="Data storage and management"
-        skills={[
-          "PostgreSQL",
-          "MongoDB",
-          "MySQL",
-        ]}
-      />
-
-
-      {/* Tools */}
-      <SkillGroup
-        title="Tools & Platforms"
-        description="Development workflow"
-        skills={[
-          "Git",
-          "GitHub",
-          "Jira",
-          "Linux",
+          "Django",
+          "Flask",
           "REST APIs",
         ]}
       />
 
-
-      {/* Other */}
+      {/* Databases */}
       <SkillGroup
-        title="Other"
-        description="Additional technologies"
+        title="Databases"
+        skills={[
+          "PostgreSQL",
+          "MongoDB",
+          "SQL",
+        ]}
+      />
+
+      {/* Blockchain & AI */}
+      <SkillGroup
+        title="Other Technologies"
         skills={[
           "Solidity",
           "Ethers.js",
+          "Git",
+          "GitHub",
           "TensorFlow",
-          "Machine Learning",
-          "Blockchain",
+          "Linux",
+        ]}
+      />
+
+      {/* Tools */}
+      <SkillGroup
+        title="Tools & Platforms"
+        skills={[
+          "Jira",
+          "Git",
+          "GitHub",
+          "Google Cloud",
+          "Microsoft Azure",
         ]}
       />
 
     </div>
-
-  </div>
+  </motion.div>
 </section>
 
-{/* =====================================================
-    CERTIFICATIONS & EDUCATION
-===================================================== */}
+{/* =================================================
+    CERTIFICATIONS
+================================================= */}
 <section
   id="certifications"
-  className="relative border-t border-white/10 py-32"
+  className="mx-auto max-w-6xl px-6 py-32"
 >
-  <div className="mx-auto max-w-6xl px-6">
-
+  <motion.div
+    initial={{ opacity: 0, y: 25 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+  >
     {/* Heading */}
-    <motion.div
-      initial={{ opacity: 0, y: 25 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6 }}
-    >
-      <p className="text-sm font-medium uppercase tracking-[0.2em] text-blue-400">
-        Background
-      </p>
+    <p className="text-sm uppercase tracking-[0.2em] text-blue-400">
+      Certifications
+    </p>
 
-      <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
-        Education & certifications.
-      </h2>
-    </motion.div>
+    <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
+      Continuous learning.
+    </h2>
 
+    <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-400">
+      Certifications and credentials that complement my
+      software engineering and cloud technology skills.
+    </p>
 
-    {/* Content */}
-    <div className="mt-16 grid gap-6 lg:grid-cols-2">
+    {/* Certification cards */}
+    <div className="mt-16 grid gap-5 md:grid-cols-2">
 
-      {/* Education */}
-      <motion.div
-        initial={{ opacity: 0, x: -25 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6 }}
+      {/* Google Cloud */}
+      <motion.article
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
         className="
-          rounded-3xl
+          group
+          rounded-2xl
           border
           border-white/10
           bg-white/[0.02]
-          p-8
+          p-6
+          transition-all
+          duration-300
+          hover:border-blue-400/30
+          hover:bg-white/[0.03]
         "
       >
-        <p className="text-xs uppercase tracking-[0.18em] text-gray-500">
-          Education
-        </p>
+        <div className="flex items-start justify-between gap-5">
 
-        <h3 className="mt-6 text-2xl font-semibold">
-          B.Tech in Computer Science & Engineering
-        </h3>
+          <div>
+            <p className="text-xs uppercase tracking-[0.15em] text-gray-600">
+              Google Cloud
+            </p>
 
-        <p className="mt-2 text-gray-400">
-          Koneru Lakshmaiah University
-        </p>
+            <h3 className="mt-3 text-xl font-semibold text-gray-200">
+              Associate Cloud Engineer
+            </h3>
 
-        <p className="mt-1 text-sm text-gray-600">
-          2022 — 2026
-        </p>
+            <p className="mt-2 text-sm leading-6 text-gray-500">
+              Google Cloud certification focused on cloud
+              infrastructure, deployment, and application
+              management.
+            </p>
+          </div>
 
-        <div className="mt-8 border-t border-white/10 pt-6">
-          <p className="text-sm text-gray-500">
-            Bachelor of Technology
-          </p>
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-blue-400/20 bg-blue-400/5 text-blue-400">
+            GCP
+          </div>
 
-          <p className="mt-2 text-lg font-medium text-blue-400">
-            Computer Science & Engineering
-          </p>
         </div>
-      </motion.div>
+      </motion.article>
 
 
-      {/* Certifications */}
-      <motion.div
-        initial={{ opacity: 0, x: 25 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6 }}
+      {/* HackerRank */}
+      <motion.article
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.1 }}
         className="
-          rounded-3xl
+          group
+          rounded-2xl
           border
           border-white/10
           bg-white/[0.02]
-          p-8
+          p-6
+          transition-all
+          duration-300
+          hover:border-green-400/30
+          hover:bg-white/[0.03]
         "
       >
-        <p className="text-xs uppercase tracking-[0.18em] text-gray-500">
-          Certifications
-        </p>
+        <div className="flex items-start justify-between gap-5">
 
-        <div className="mt-6 space-y-5">
+          <div>
+            <p className="text-xs uppercase tracking-[0.15em] text-gray-600">
+              HackerRank
+            </p>
 
-          <Certification
-            title="Associate Cloud Engineer"
-            issuer="Google Cloud"
-          />
+            <h3 className="mt-3 text-xl font-semibold text-gray-200">
+              Problem Solving
+            </h3>
 
-          <Certification
-            title="Automation 360 RPA Essentials for Students"
-            issuer="Automation Anywhere"
-          />
+            <p className="mt-2 text-sm leading-6 text-gray-500">
+              Demonstrates problem-solving and programming
+              skills through algorithmic challenges.
+            </p>
+          </div>
 
-          <Certification
-            title="Problem Solving"
-            issuer="HackerRank"
-          />
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-green-400/20 bg-green-400/5 text-sm font-semibold text-green-400">
+            HR
+          </div>
 
         </div>
-      </motion.div>
+      </motion.article>
+
+
+      {/* Automation Anywhere */}
+      <motion.article
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="
+          group
+          rounded-2xl
+          border
+          border-white/10
+          bg-white/[0.02]
+          p-6
+          transition-all
+          duration-300
+          hover:border-purple-400/30
+          hover:bg-white/[0.03]
+        "
+      >
+        <div className="flex items-start justify-between gap-5">
+
+          <div>
+            <p className="text-xs uppercase tracking-[0.15em] text-gray-600">
+              Automation Anywhere
+            </p>
+
+            <h3 className="mt-3 text-xl font-semibold text-gray-200">
+              RPA Essentials for Students
+            </h3>
+
+            <p className="mt-2 text-sm leading-6 text-gray-500">
+              Credential covering foundational robotic process
+              automation concepts and Automation 360.
+            </p>
+          </div>
+
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-purple-400/20 bg-purple-400/5 text-xs font-semibold text-purple-400">
+            RPA
+          </div>
+
+        </div>
+      </motion.article>
+
+
+      {/* Microsoft Azure */}
+      <motion.article
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="
+          group
+          rounded-2xl
+          border
+          border-white/10
+          bg-white/[0.02]
+          p-6
+          transition-all
+          duration-300
+          hover:border-cyan-400/30
+          hover:bg-white/[0.03]
+        "
+      >
+        <div className="flex items-start justify-between gap-5">
+
+          <div>
+            <p className="text-xs uppercase tracking-[0.15em] text-gray-600">
+              Microsoft
+            </p>
+
+            <h3 className="mt-3 text-xl font-semibold text-gray-200">
+              Microsoft Azure
+            </h3>
+
+            <p className="mt-2 text-sm leading-6 text-gray-500">
+              Cloud technology credential covering Microsoft
+              Azure fundamentals and services.
+            </p>
+          </div>
+
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-cyan-400/20 bg-cyan-400/5 text-xs font-semibold text-cyan-400">
+            AZ
+          </div>
+
+        </div>
+      </motion.article>
 
     </div>
-
-  </div>
+  </motion.div>
 </section>
 
-{/* =====================================================
+{/* =================================================
     CONTACT
-===================================================== */}
+================================================= */}
 <section
   id="contact"
-  className="relative border-t border-white/10 py-32"
+  className="mx-auto max-w-6xl px-6 py-32"
 >
-  <div className="mx-auto max-w-6xl px-6">
-
-    <motion.div
-      initial={{ opacity: 0, y: 25 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6 }}
+  <motion.div
+    initial={{ opacity: 0, y: 25 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+    className="
+      relative
+      overflow-hidden
+      rounded-3xl
+      border
+      border-white/10
+      bg-white/[0.02]
+      p-8
+      sm:p-12
+      lg:p-16
+    "
+  >
+    {/* Background glow */}
+    <div
       className="
-        overflow-hidden
-        rounded-3xl
-        border
-        border-white/10
-        bg-white/[0.02]
-        p-8
-        sm:p-12
-        lg:p-16
+        pointer-events-none
+        absolute
+        left-1/2
+        top-1/2
+        h-96
+        w-96
+        -translate-x-1/2
+        -translate-y-1/2
+        rounded-full
+        bg-blue-500/10
+        blur-[120px]
       "
-    >
+    />
 
-      <div className="max-w-3xl">
+    <div className="relative text-center">
 
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-blue-400">
-          Contact
-        </p>
+      {/* Label */}
+      <p className="text-sm uppercase tracking-[0.2em] text-blue-400">
+        Contact
+      </p>
 
-        <h2 className="mt-5 text-4xl font-bold tracking-tight sm:text-6xl">
-          Let's build something useful.
-        </h2>
+      {/* Heading */}
+      <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+        Let's build something useful.
+      </h2>
 
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-500">
-          I'm always interested in discussing software projects,
-          engineering opportunities, and ideas worth building.
-        </p>
+      {/* Description */}
+      <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-400">
+        I'm open to software engineering opportunities,
+        interesting projects, and conversations around
+        technology and development.
+      </p>
+
+      {/* Email button */}
+      <div className="mt-10 flex flex-wrap justify-center gap-4">
 
         <a
           href="mailto:shaikyasirahmed07@gmail.com"
           className="
-            mt-9
+            group
             inline-flex
             items-center
             gap-2
@@ -1322,58 +1835,123 @@ export default function Home() {
           "
         >
           Get in touch
-          <ArrowUpRight size={17} />
+
+          <ArrowUpRight
+            size={17}
+            className="
+              transition-transform
+              group-hover:translate-x-0.5
+              group-hover:-translate-y-0.5
+            "
+          />
+        </a>
+
+        <a
+          href="/Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            inline-flex
+            items-center
+            rounded-full
+            border
+            border-white/15
+            px-6
+            py-3
+            font-medium
+            text-white
+            transition
+            hover:border-white/30
+            hover:bg-white/5
+          "
+        >
+          View Resume
         </a>
 
       </div>
 
-    </motion.div>
+      {/* Contact details */}
+      <div className="mt-10 flex flex-col items-center gap-3 text-sm text-gray-500">
 
-  </div>
+        <a
+          href="mailto:shaikyasirahmed07@gmail.com"
+          className="transition hover:text-white"
+        >
+          shaikyasirahmed07@gmail.com
+        </a>
+
+        <span>
+          India
+        </span>
+
+      </div>
+
+    </div>
+  </motion.div>
 </section>
 
-{/* =====================================================
+
+{/* =================================================
     FOOTER
-===================================================== */}
+================================================= */}
 <footer className="border-t border-white/10">
-  <div className="mx-auto flex max-w-6xl flex-col gap-5 px-6 py-8 sm:flex-row sm:items-center sm:justify-between">
 
-    <p className="text-sm text-gray-600">
-      © {new Date().getFullYear()} Shaik Yasir Ahmed.
-      All rights reserved.
-    </p>
+  <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-8 sm:flex-row sm:items-center sm:justify-between">
 
-    <div className="flex items-center gap-6 text-sm text-gray-600">
+    {/* Copyright */}
+    <div>
+      <p className="text-sm text-gray-500">
+        © {new Date().getFullYear()} Shaik Yasir Ahmed.
+      </p>
 
+      <p className="mt-1 text-xs text-gray-700">
+        Built with Next.js, React & Tailwind CSS.
+      </p>
+    </div>
+
+
+    {/* Social links */}
+    <div className="flex items-center gap-5">
+
+      {/* GitHub */}
       <a
         href="https://github.com/shaikyasirahmed07"
         target="_blank"
         rel="noopener noreferrer"
-        className="transition hover:text-white"
+        aria-label="GitHub"
+        className="text-gray-500 transition hover:text-white"
       >
         GitHub
       </a>
 
+
+      {/* LinkedIn */}
       <a
         href="https://www.linkedin.com/in/shaikyasirahmed07/"
         target="_blank"
         rel="noopener noreferrer"
-        className="transition hover:text-white"
+        aria-label="LinkedIn"
+        className="text-gray-500 transition hover:text-white"
       >
         LinkedIn
       </a>
 
+
+      {/* Email */}
       <a
-        href="#"
-        className="transition hover:text-white"
+        href="mailto:shaikyasirahmed07@gmail.com"
+        aria-label="Email"
+        className="text-gray-500 transition hover:text-white"
       >
-        Back to top ↑
+        Email
       </a>
 
     </div>
 
   </div>
+
 </footer>
+
 
     </main>
   );
@@ -1466,88 +2044,55 @@ function ProjectCard({
 }
 function SkillGroup({
   title,
-  description,
   skills,
 }: {
   title: string;
-  description: string;
   skills: string[];
 }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
+      viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       className="
-        group
-        rounded-3xl
+        rounded-2xl
         border
         border-white/10
         bg-white/[0.02]
-        p-7
+        p-6
         transition-all
         duration-300
         hover:border-white/20
-        hover:bg-white/[0.035]
+        hover:bg-white/[0.03]
       "
     >
+      <h3 className="text-lg font-semibold text-gray-200">
+        {title}
+      </h3>
 
-      {/* Category */}
-      <div className="flex items-start justify-between">
-
-        <div>
-          <h3 className="text-xl font-semibold tracking-tight">
-            {title}
-          </h3>
-
-          <p className="mt-2 text-sm text-gray-600">
-            {description}
-          </p>
-        </div>
-
-        <div
-          className="
-            h-2
-            w-2
-            rounded-full
-            bg-blue-400/70
-            transition-all
-            duration-300
-            group-hover:scale-150
-            group-hover:bg-blue-400
-          "
-        />
-
-      </div>
-
-
-      {/* Technologies */}
-      <div className="mt-7 flex flex-wrap gap-2">
-
+      <div className="mt-5 flex flex-wrap gap-2">
         {skills.map((skill) => (
           <span
             key={skill}
             className="
-              rounded-xl
+              rounded-lg
               border
               border-white/10
               bg-black/20
               px-3
-              py-2
+              py-1.5
               text-sm
               text-gray-400
-              transition-colors
-              hover:border-white/20
+              transition
+              hover:border-blue-400/30
               hover:text-white
             "
           >
             {skill}
           </span>
         ))}
-
       </div>
-
     </motion.div>
   );
 }
