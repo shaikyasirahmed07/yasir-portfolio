@@ -333,7 +333,7 @@ export default function Home() {
 
               {/* LinkedIn */}
               <a
-                href="https://www.linkedin.com/in/yasirahmedshaik07"
+                href="https://www.linkedin.com/in/shaikyasirahmed07/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
@@ -1355,7 +1355,7 @@ export default function Home() {
       </a>
 
       <a
-        href="https://www.linkedin.com/in/yasirahmedshaik07"
+        href="https://www.linkedin.com/in/shaikyasirahmed07/"
         target="_blank"
         rel="noopener noreferrer"
         className="transition hover:text-white"
