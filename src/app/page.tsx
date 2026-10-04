@@ -1831,31 +1831,6 @@ export default function Home() {
 
                   </div>
                 </a>
-
-
-                {/* =================================================
-                    HACKERRANK
-                ================================================= */}
-                <div className="border-t border-white/10 pt-6">
-                  <div className="flex items-start justify-between gap-4">
-
-                    <div>
-                      <h3 className="font-medium text-white">
-                        Problem Solving
-                      </h3>
-
-                      <p className="mt-1 text-sm text-gray-500">
-                        HackerRank
-                      </p>
-                    </div>
-
-                    <span className="text-xs text-gray-600">
-                      Programming
-                    </span>
-
-                  </div>
-                </div>
-
               </div>
             </motion.div>
 
