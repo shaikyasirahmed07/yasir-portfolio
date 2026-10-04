@@ -8,7 +8,10 @@ import {
   Menu,
   X,
 } from "lucide-react";
+
+
 import { useState } from "react";
+
 
 /* =========================================================
    REUSABLE SKILL COMPONENT
@@ -81,9 +84,9 @@ export default function Home() {
     ["Experience", "#experience"],
     ["Projects", "#projects"],
     ["Skills", "#skills"],
-    ["Certifications", "#certifications"],
+    ["Education", "#education"],
     ["Contact", "#contact"],
-  ];
+  ] as const;
 
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-white">
@@ -565,1148 +568,1430 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* =================================================
-          EXPERIENCE
-      ================================================= */}
 
-      <section
-        id="experience"
-        className="mx-auto max-w-6xl px-6 py-32"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        {/* =================================================
+            EXPERIENCE
+        ================================================= */}
+        <section
+          id="experience"
+          className="mx-auto max-w-6xl px-6 py-32"
         >
-          <p className="text-sm uppercase tracking-[0.2em] text-blue-400">
-            Experience
-          </p>
-
-          <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
-            Professional experience.
-          </h2>
-
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-400">
-            Experience working in a structured, quality-focused
-            professional environment while contributing to
-            technology-driven client operations.
-          </p>
-        </motion.div>
-
-        <motion.article
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.7 }}
-          className="
-            group
-            relative
-            mt-16
-            overflow-hidden
-            rounded-3xl
-            border
-            border-white/10
-            bg-white/[0.02]
-            p-7
-            transition-all
-            duration-500
-            hover:border-blue-400/30
-            sm:p-10
-          "
-        >
-          <div className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-blue-500/5 blur-[100px] transition-all duration-500 group-hover:bg-blue-500/10" />
-
-          <div className="relative">
-
-            <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
-
-              <div>
-                <div className="flex flex-wrap items-center gap-3">
-
-                  <h3 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                    Associate Process Executive
-                  </h3>
-
-                  <span className="rounded-full border border-emerald-400/20 bg-emerald-400/5 px-3 py-1 text-xs font-medium text-emerald-400">
-                    Current
-                  </span>
-
-                </div>
-
-                <p className="mt-2 text-lg text-blue-400">
-                  upGrad Education Pvt. Ltd.
-                </p>
-              </div>
-
-              <div className="text-sm text-gray-500 sm:text-right">
-                <p>2026 — Present</p>
-                <p className="mt-1">Remote</p>
-              </div>
-            </div>
-
-            <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.02] p-5">
-              <p className="text-xs uppercase tracking-[0.18em] text-gray-600">
-                Client Project
-              </p>
-
-              <p className="mt-2 text-lg font-medium text-gray-200">
-                NVIDIA Graphics Private Limited
-              </p>
-
-              <p className="mt-2 text-sm leading-6 text-gray-500">
-                Working on a client project in a structured,
-                quality-focused professional environment.
-              </p>
-            </div>
-
-            <div className="mt-10">
-
-              <p className="text-sm uppercase tracking-[0.18em] text-gray-600">
-                Responsibilities
-              </p>
-
-              <div className="mt-5 grid gap-4 sm:grid-cols-2">
-
-                {[
-                  [
-                    "Quality-focused operations",
-                    "Performing structured tasks with attention to accuracy, consistency, and quality requirements.",
-                  ],
-                  [
-                    "Data & visual processing",
-                    "Working with visual data and following defined guidelines to produce reliable and consistent results.",
-                  ],
-                  [
-                    "Process adherence",
-                    "Following established workflows, instructions, quality standards, and project requirements.",
-                  ],
-                  [
-                    "Team collaboration",
-                    "Collaborating within a professional project environment while meeting assigned timelines and operational requirements.",
-                  ],
-                ].map(([title, description]) => (
-                  <div
-                    key={title}
-                    className="rounded-2xl border border-white/10 bg-white/[0.02] p-5"
-                  >
-                    <h4 className="font-medium text-gray-200">
-                      {title}
-                    </h4>
-
-                    <p className="mt-2 text-sm leading-6 text-gray-500">
-                      {description}
-                    </p>
-                  </div>
-                ))}
-
-              </div>
-            </div>
-
-            <div className="mt-10">
-
-              <p className="text-sm uppercase tracking-[0.18em] text-gray-600">
-                Professional strengths
-              </p>
-
-              <div className="mt-5 flex flex-wrap gap-2">
-                {[
-                  "Attention to Detail",
-                  "Quality Assurance",
-                  "Data Processing",
-                  "Problem Solving",
-                  "Process Discipline",
-                  "Team Collaboration",
-                  "Time Management",
-                ].map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs text-gray-400"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-
-            </div>
-          </div>
-        </motion.article>
-      </section>
-
-      {/* =================================================
-          PROJECTS
-      ================================================= */}
-
-      <section
-        id="projects"
-        className="relative border-t border-white/10 py-32"
-      >
-        <div className="mx-auto max-w-6xl px-6">
-
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-blue-400">
-              Selected Work
+          {/* Section heading */}
+          <div className="max-w-2xl">
+            <p className="text-sm uppercase tracking-[0.2em] text-blue-400">
+              Experience
             </p>
 
-            <h2 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl">
-              Things I've built.
+            <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
+              Professional experience.
             </h2>
 
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-500">
-              A selection of projects spanning full-stack development,
-              blockchain, backend systems, and developer tooling.
+            <p className="mt-5 text-lg leading-8 text-gray-400">
+              Experience working in a structured, quality-focused environment
+              while contributing to client-driven technology operations.
             </p>
-          </motion.div>
+          </div>
 
-          {/* =================================================
-              REPO LENS
-          ================================================= */}
-
+          {/* Experience Card */}
           <motion.article
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7 }}
-            className="group relative mt-16 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] transition-all duration-500 hover:border-blue-400/30"
+            className="
+              group
+              relative
+              mt-16
+              overflow-hidden
+              rounded-3xl
+              border
+              border-white/10
+              bg-white/[0.02]
+              p-7
+              transition-all
+              duration-500
+              hover:border-blue-400/30
+              sm:p-10
+            "
           >
-            <div className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-blue-500/10 blur-[100px]" />
+            {/* Background glow */}
+            <div
+              className="
+                pointer-events-none
+                absolute
+                -right-32
+                -top-32
+                h-80
+                w-80
+                rounded-full
+                bg-blue-500/10
+                blur-[100px]
+                transition-all
+                duration-500
+                group-hover:bg-blue-500/15
+              "
+            />
 
-            <div className="relative grid gap-10 p-7 sm:p-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
-
-              <div>
-
-                <div className="flex items-center gap-3">
-                  <span className="rounded-full border border-blue-400/20 bg-blue-400/5 px-3 py-1 text-xs font-medium text-blue-400">
-                    Currently in development
-                  </span>
-
-                  <span className="text-sm text-gray-600">
-                    01
-                  </span>
-                </div>
-
-                <h3 className="mt-6 text-3xl font-semibold tracking-tight sm:text-4xl">
-                  RepoLens
-                </h3>
-
-                <p className="mt-4 max-w-xl text-lg leading-8 text-gray-400">
-                  A developer-focused platform for analyzing GitHub
-                  repositories and turning complex codebases into
-                  easier-to-understand project insights.
-                </p>
-
-                <div className="mt-7 flex flex-wrap gap-2">
-                  {[
-                    "Next.js",
-                    "TypeScript",
-                    "React",
-                    "GitHub API",
-                    "AI",
-                    "Tailwind CSS",
-                  ].map((technology) => (
-                    <span
-                      key={technology}
-                      className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs text-gray-400"
-                    >
-                      {technology}
+            <div className="relative">
+              {/* Header */}
+              <div className="flex flex-col justify-between gap-6 md:flex-row md:items-start">
+                <div>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <span className="rounded-full border border-emerald-400/20 bg-emerald-400/5 px-3 py-1 text-xs font-medium text-emerald-400">
+                      Current
                     </span>
-                  ))}
-                </div>
 
-                <div className="mt-9 flex items-center gap-3">
-                  <span className="relative flex h-2.5 w-2.5">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-60" />
-                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-blue-400" />
-                  </span>
-
-                  <span className="text-sm text-gray-500">
-                    Active development
-                  </span>
-                </div>
-
-              </div>
-
-              {/* RepoLens preview */}
-              <div className="relative min-h-[280px] overflow-hidden rounded-2xl border border-white/10 bg-[#080808]">
-
-                <div className="flex h-10 items-center gap-2 border-b border-white/10 px-4">
-                  <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
-
-                  <div className="ml-3 flex-1 rounded-md border border-white/5 bg-white/[0.03] px-3 py-1 text-[10px] text-gray-600">
-                    repolens
-                  </div>
-                </div>
-
-                <div className="p-5">
-
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="h-3 w-24 rounded bg-white/10" />
-                      <div className="mt-2 h-2 w-36 rounded bg-white/5" />
-                    </div>
-
-                    <div className="h-7 w-20 rounded-lg bg-blue-500/10" />
+                    <span className="text-sm text-gray-600">
+                      Aug 2026 — Present
+                    </span>
                   </div>
 
-                  <div className="mt-6 grid grid-cols-[0.35fr_0.65fr] gap-3">
+                  <h3 className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl">
+                    Associate Process Executive
+                  </h3>
 
-                    <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
-                      <div className="h-2 w-16 rounded bg-white/10" />
+                  <p className="mt-2 text-lg text-gray-400">
+                    upGrad Education Pvt. Ltd.
+                  </p>
+                </div>
 
-                      <div className="mt-4 space-y-3">
-                        <div className="h-2 w-20 rounded bg-white/5" />
-                        <div className="ml-3 h-2 w-16 rounded bg-white/5" />
-                        <div className="ml-3 h-2 w-20 rounded bg-blue-400/20" />
-                        <div className="ml-3 h-2 w-14 rounded bg-white/5" />
-                        <div className="h-2 w-24 rounded bg-white/5" />
-                      </div>
-                    </div>
+                <div className="shrink-0 text-left md:text-right">
+                  <p className="text-sm text-gray-500">
+                    Client Project
+                  </p>
 
-                    <div className="relative min-h-[150px] rounded-xl border border-white/5 bg-white/[0.02] p-4">
-
-                      <div className="h-2 w-20 rounded bg-white/10" />
-
-                      <div className="absolute left-5 top-16 h-8 w-16 rounded-lg border border-blue-400/20 bg-blue-400/5" />
-
-                      <div className="absolute left-1/2 top-10 h-8 w-16 -translate-x-1/2 rounded-lg border border-white/10 bg-white/[0.03]" />
-
-                      <div className="absolute right-5 top-16 h-8 w-16 rounded-lg border border-white/10 bg-white/[0.03]" />
-
-                      <div className="absolute bottom-6 left-1/2 h-8 w-16 -translate-x-1/2 rounded-lg border border-white/10 bg-white/[0.03]" />
-
-                    </div>
-                  </div>
+                  <p className="mt-1 font-medium text-white">
+                    NVIDIA Graphics
+                  </p>
                 </div>
               </div>
 
+              {/* Divider */}
+              <div className="my-8 h-px bg-white/10" />
+
+              {/* Description */}
+              <p className="max-w-4xl text-base leading-8 text-gray-400 sm:text-lg">
+                Working in a structured, quality-focused environment on a
+                client project for NVIDIA Graphics, contributing to
+                operational workflows, data-focused tasks, quality checks,
+                and timely delivery of assigned work.
+              </p>
+
+              {/* Responsibilities */}
+              <div className="mt-10 grid gap-8 md:grid-cols-2">
+                <div>
+                  <p className="text-sm font-medium uppercase tracking-[0.15em] text-gray-500">
+                    Responsibilities
+                  </p>
+
+                  <ul className="mt-5 space-y-4 text-gray-400">
+                    <li className="flex gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" />
+                      <span>
+                        Perform assigned data-focused tasks while maintaining
+                        accuracy and quality standards.
+                      </span>
+                    </li>
+
+                    <li className="flex gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" />
+                      <span>
+                        Follow defined processes, guidelines, and project
+                        requirements consistently.
+                      </span>
+                    </li>
+
+                    <li className="flex gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" />
+                      <span>
+                        Review work carefully to identify errors and maintain
+                        output quality.
+                      </span>
+                    </li>
+
+                    <li className="flex gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" />
+                      <span>
+                        Manage assigned tasks within defined timelines and
+                        productivity expectations.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <p className="text-sm font-medium uppercase tracking-[0.15em] text-gray-500">
+                    Skills Applied
+                  </p>
+
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    {[
+                      "Data Quality",
+                      "Quality Assurance",
+                      "Process Management",
+                      "Problem Solving",
+                      "Attention to Detail",
+                      "Team Collaboration",
+                      "Time Management",
+                      "Technical Operations",
+                    ].map((skill) => (
+                      <span
+                        key={skill}
+                        className="
+                          rounded-full
+                          border
+                          border-white/10
+                          bg-white/[0.03]
+                          px-4
+                          py-2
+                          text-sm
+                          text-gray-400
+                          transition
+                          hover:border-blue-400/30
+                          hover:text-white
+                        "
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.article>
+        </section>
+
+        {/* =================================================
+            PROJECTS
+        ================================================= */}
+        <section
+          id="projects"
+          className="mx-auto max-w-6xl px-6 py-32"
+        >
+          {/* Section heading */}
+          <div className="max-w-2xl">
+            <p className="text-sm uppercase tracking-[0.2em] text-blue-400">
+              Projects
+            </p>
+
+            <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
+              Things I've built.
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-gray-400">
+              A selection of projects spanning AI, full-stack development,
+              blockchain, and modern web applications.
+            </p>
+          </div>
 
           {/* =================================================
-              OTHER PROJECTS
+              PROJECT GRID
           ================================================= */}
+          <div className="mt-16 grid gap-6 md:grid-cols-2">
 
-          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            {/* =================================================
+                REPO LENS — IN PROGRESS
+            ================================================= */}
+            <motion.article
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6 }}
+              className="
+                group
+                relative
+                overflow-hidden
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/[0.02]
+                p-7
+                transition-all
+                duration-500
+                hover:-translate-y-1
+                hover:border-blue-400/30
+                sm:p-8
+                md:col-span-2
+              "
+            >
+              {/* Background glow */}
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  -right-32
+                  -top-32
+                  h-80
+                  w-80
+                  rounded-full
+                  bg-blue-500/10
+                  blur-[100px]
+                  transition-all
+                  duration-500
+                  group-hover:bg-blue-500/15
+                "
+              />
+
+              <div className="relative grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+
+                {/* Project information */}
+                <div>
+                  <div className="flex items-center justify-between">
+                    <span
+                      className="
+                        rounded-full
+                        border
+                        border-amber-400/20
+                        bg-amber-400/5
+                        px-3
+                        py-1
+                        text-xs
+                        font-medium
+                        text-amber-400
+                      "
+                    >
+                      In Progress
+                    </span>
+
+                    <span className="text-sm text-gray-600">
+                      01
+                    </span>
+                  </div>
+
+                  <h3 className="mt-7 text-3xl font-semibold tracking-tight sm:text-4xl">
+                    RepoLens
+                  </h3>
+
+                  <p className="mt-4 max-w-2xl text-lg leading-8 text-gray-400">
+                    AI-powered repository intelligence platform designed to
+                    help developers understand GitHub repositories through
+                    architecture visualization, documentation, and codebase
+                    insights.
+                  </p>
+
+                  <div className="mt-7 flex flex-wrap gap-2">
+                    {[
+                      "Next.js",
+                      "TypeScript",
+                      "React",
+                      "Tailwind CSS",
+                      "GitHub API",
+                      "AI",
+                    ].map((tech) => (
+                      <span
+                        key={tech}
+                        className="
+                          rounded-full
+                          border
+                          border-white/10
+                          bg-white/[0.02]
+                          px-3
+                          py-1.5
+                          text-xs
+                          text-gray-500
+                          transition
+                          hover:border-white/20
+                          hover:text-gray-300
+                        "
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Project status */}
+                <div className="flex items-end lg:justify-end">
+                  <div
+                    className="
+                      w-full
+                      rounded-2xl
+                      border
+                      border-white/10
+                      bg-black/20
+                      p-6
+                      lg:max-w-xs
+                    "
+                  >
+                    <p className="text-xs uppercase tracking-[0.15em] text-gray-600">
+                      Current Status
+                    </p>
+
+                    <p className="mt-3 text-lg font-medium text-white">
+                      Actively developing
+                    </p>
+
+                    <p className="mt-2 text-sm leading-6 text-gray-500">
+                      Building the platform incrementally with a focus on
+                      repository analysis, architecture visualization, and
+                      developer-focused insights.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </motion.article>
+
 
             {/* =================================================
                 DAKSHKRISHI
             ================================================= */}
-
             <motion.article
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.7 }}
-              className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-emerald-400/30 sm:p-10"
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="
+                group
+                relative
+                overflow-hidden
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/[0.02]
+                p-7
+                transition-all
+                duration-500
+                hover:-translate-y-1
+                hover:border-emerald-400/30
+                sm:p-8
+              "
             >
-              <div className="flex items-center justify-between gap-4">
-                <span className="rounded-full border border-emerald-400/20 bg-emerald-400/5 px-3 py-1 text-xs font-medium text-emerald-400">
-                  Full-Stack Project
-                </span>
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  -right-24
+                  -top-24
+                  h-64
+                  w-64
+                  rounded-full
+                  bg-emerald-500/10
+                  blur-[90px]
+                "
+              />
 
-                <span className="text-sm text-gray-600">
-                  02
-                </span>
-              </div>
+              <div className="relative">
 
-              <h3 className="mt-6 text-3xl font-semibold tracking-tight sm:text-4xl">
-                DakshKrishi
-              </h3>
-
-              <p className="mt-4 text-lg leading-8 text-gray-400">
-                A full-stack crop recommendation platform designed
-                to help farmers make better crop decisions using
-                agricultural data and recommendation-based insights.
-              </p>
-
-              <div className="mt-7 flex flex-wrap gap-2">
-                {[
-                  "React",
-                  "Spring Boot",
-                  "PostgreSQL",
-                  "REST API",
-                  "Java",
-                ].map((technology) => (
+                <div className="flex items-center justify-between">
                   <span
-                    key={technology}
-                    className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs text-gray-400"
+                    className="
+                      rounded-full
+                      border
+                      border-emerald-400/20
+                      bg-emerald-400/5
+                      px-3
+                      py-1
+                      text-xs
+                      font-medium
+                      text-emerald-400
+                    "
                   >
-                    {technology}
+                    Full Stack
                   </span>
-                ))}
-              </div>
 
-              <div className="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-[#080808]">
-
-                <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
-                  <div>
-                    <div className="h-3 w-28 rounded bg-white/10" />
-                    <div className="mt-2 h-2 w-40 rounded bg-white/5" />
-                  </div>
-
-                  <div className="h-7 w-24 rounded-lg bg-emerald-400/10" />
+                  <span className="text-sm text-gray-600">
+                    02
+                  </span>
                 </div>
 
-                <div className="grid gap-4 p-5 sm:grid-cols-3">
+                <h3 className="mt-7 text-2xl font-semibold">
+                  DakshKrishi
+                </h3>
 
-                  {["Crop", "Soil", "Recommendation"].map((item) => (
-                    <div
-                      key={item}
-                      className="rounded-xl border border-white/5 bg-white/[0.02] p-5"
+                <p className="mt-4 leading-7 text-gray-400">
+                  Full-stack crop recommendation system built to provide
+                  agriculture-focused recommendations through a modern web
+                  application.
+                </p>
+
+                <div className="mt-7 flex flex-wrap gap-2">
+                  {[
+                    "React",
+                    "Spring Boot",
+                    "PostgreSQL",
+                    "Java",
+                    "REST API",
+                  ].map((tech) => (
+                    <span
+                      key={tech}
+                      className="
+                        rounded-full
+                        border
+                        border-white/10
+                        bg-white/[0.02]
+                        px-3
+                        py-1.5
+                        text-xs
+                        text-gray-500
+                      "
                     >
-                      <div className="h-2 w-20 rounded bg-white/10" />
-
-                      <div className="mt-5 h-10 w-16 rounded bg-emerald-400/10" />
-
-                      <p className="mt-3 text-xs text-gray-600">
-                        {item}
-                      </p>
-                    </div>
+                      {tech}
+                    </span>
                   ))}
-
                 </div>
 
-                <div className="mx-5 mb-5 rounded-xl border border-emerald-400/10 bg-emerald-400/[0.03] p-5">
-                  <div className="h-2 w-28 rounded bg-emerald-400/20" />
-
-                  <div className="mt-4 flex flex-wrap gap-3">
-                    <span className="rounded-lg bg-white/[0.04] px-4 py-2 text-xs text-gray-500">
-                      Crop Recommendation
-                    </span>
-
-                    <span className="rounded-lg bg-white/[0.04] px-4 py-2 text-xs text-gray-500">
-                      Soil Analysis
-                    </span>
-
-                    <span className="rounded-lg bg-white/[0.04] px-4 py-2 text-xs text-gray-500">
-                      Agricultural Insights
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* REAL REPOSITORIES */}
-              <div className="mt-8 flex flex-wrap gap-4">
-
-                <a
-                  href="https://github.com/shaikyasirahmed07/DakshKrishi_frontend"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm font-medium text-gray-300 transition hover:border-white/20 hover:bg-white/5 hover:text-white"
-                >
-                  Frontend ↗
-                </a>
-
-                <a
-                  href="https://github.com/shaikyasirahmed07/DakshKrish-backend"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm font-medium text-gray-300 transition hover:border-white/20 hover:bg-white/5 hover:text-white"
-                >
-                  Backend ↗
-                </a>
-
-              </div>
-            </motion.article>
-
-            {/* =================================================
-                WATER BILLING DAPP
-            ================================================= */}
-
-            <motion.article
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.7 }}
-              className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-purple-400/30 sm:p-10"
-            >
-              <div className="flex items-center justify-between gap-4">
-                <span className="rounded-full border border-purple-400/20 bg-purple-400/5 px-3 py-1 text-xs font-medium text-purple-400">
-                  Blockchain + Full-Stack
-                </span>
-
-                <span className="text-sm text-gray-600">
-                  03
-                </span>
-              </div>
-
-              <h3 className="mt-6 text-3xl font-semibold tracking-tight sm:text-4xl">
-                Water Billing DApp
-              </h3>
-
-              <p className="mt-4 text-lg leading-8 text-gray-400">
-                A decentralized water billing application that
-                combines blockchain technology with a modern web
-                interface to provide transparent and reliable
-                billing transactions.
-              </p>
-
-              <div className="mt-7 flex flex-wrap gap-2">
-                {[
-                  "Solidity",
-                  "React",
-                  "Ethers.js",
-                  "Blockchain",
-                  "Smart Contracts",
-                ].map((technology) => (
-                  <span
-                    key={technology}
-                    className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs text-gray-400"
+                <div className="mt-8 flex flex-wrap gap-4">
+                  <a
+                    href="https://github.com/shaikyasirahmed07/DakshKrishi_frontend"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                      text-sm
+                      font-medium
+                      text-gray-400
+                      transition
+                      hover:text-white
+                    "
                   >
-                    {technology}
-                  </span>
-                ))}
-              </div>
+                    Frontend ↗
+                  </a>
 
-              <div className="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-[#080808]">
-
-                <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
-                  <div>
-                    <div className="h-3 w-32 rounded bg-white/10" />
-                    <div className="mt-2 h-2 w-44 rounded bg-white/5" />
-                  </div>
-
-                  <div className="rounded-lg border border-purple-400/10 bg-purple-400/5 px-3 py-2">
-                    <div className="h-2 w-16 rounded bg-purple-400/20" />
-                  </div>
+                  <a
+                    href="https://github.com/shaikyasirahmed07/DakshKrish-backend"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                      text-sm
+                      font-medium
+                      text-gray-400
+                      transition
+                      hover:text-white
+                    "
+                  >
+                    Backend ↗
+                  </a>
                 </div>
-
-                <div className="grid gap-4 p-5 sm:grid-cols-2">
-
-                  <div className="rounded-xl border border-white/5 bg-white/[0.02] p-5">
-                    <div className="h-2 w-28 rounded bg-white/10" />
-
-                    <div className="mt-5 space-y-3">
-                      <div className="h-2 w-36 rounded bg-white/5" />
-                      <div className="h-2 w-28 rounded bg-white/5" />
-                      <div className="h-2 w-40 rounded bg-white/5" />
-                    </div>
-                  </div>
-
-                  <div className="rounded-xl border border-white/5 bg-white/[0.02] p-5">
-                    <div className="h-2 w-20 rounded bg-white/10" />
-
-                    <div className="mt-5 flex items-end justify-between">
-                      <div>
-                        <div className="h-2 w-16 rounded bg-white/5" />
-                        <div className="mt-3 h-8 w-24 rounded bg-purple-400/10" />
-                      </div>
-
-                      <div className="rounded-lg bg-purple-400/10 px-3 py-2">
-                        <div className="h-2 w-12 rounded bg-purple-400/20" />
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div className="mx-5 mb-5 rounded-xl border border-purple-400/10 bg-purple-400/[0.03] p-5">
-
-                  <div className="flex items-center justify-between gap-4">
-                    <div>
-                      <div className="h-2 w-32 rounded bg-purple-400/20" />
-                      <div className="mt-3 h-2 w-48 rounded bg-white/5" />
-                    </div>
-
-                    <span className="rounded-full border border-purple-400/10 px-3 py-1 text-[10px] text-purple-400">
-                      Verified
-                    </span>
-                  </div>
-
-                </div>
-              </div>
-
-              {/* REAL REPOSITORY */}
-              <div className="mt-8 flex flex-wrap gap-4">
-
-                <a
-                  href="https://github.com/shaikyasirahmed07/Water-bill-management"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm font-medium text-gray-300 transition hover:border-white/20 hover:bg-white/5 hover:text-white"
-                >
-                  GitHub ↗
-                </a>
 
               </div>
             </motion.article>
+
 
             {/* =================================================
                 BRODOAK HOTELS
             ================================================= */}
-
             <motion.article
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.7 }}
-              className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-500 hover:border-orange-400/30 sm:p-10 md:col-span-2"
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="
+                group
+                relative
+                overflow-hidden
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/[0.02]
+                p-7
+                transition-all
+                duration-500
+                hover:-translate-y-1
+                hover:border-purple-400/30
+                sm:p-8
+              "
             >
-              <div className="flex items-center justify-between gap-4">
-                <span className="rounded-full border border-orange-400/20 bg-orange-400/5 px-3 py-1 text-xs font-medium text-orange-400">
-                  Web Development
-                </span>
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  -right-24
+                  -top-24
+                  h-64
+                  w-64
+                  rounded-full
+                  bg-purple-500/10
+                  blur-[90px]
+                "
+              />
 
-                <span className="text-sm text-gray-600">
-                  04
-                </span>
-              </div>
+              <div className="relative">
 
-              <h3 className="mt-6 text-3xl font-semibold tracking-tight sm:text-4xl">
-                Brodoak Hotels
-              </h3>
-
-              <p className="mt-4 max-w-3xl text-lg leading-8 text-gray-400">
-                A modern hotel booking and hospitality website
-                focused on providing a clean browsing experience
-                for discovering rooms, exploring hotel information,
-                and managing reservations.
-              </p>
-
-              <div className="mt-7 flex flex-wrap gap-2">
-                {[
-                  "Python",
-                  "Django REST",
-                  "React",
-                  "PostgreSQL",
-                  "JavaScript",
-                  "Responsive Design",
-                ].map((technology) => (
+                <div className="flex items-center justify-between">
                   <span
-                    key={technology}
-                    className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs text-gray-400"
+                    className="
+                      rounded-full
+                      border
+                      border-purple-400/20
+                      bg-purple-400/5
+                      px-3
+                      py-1
+                      text-xs
+                      font-medium
+                      text-purple-400
+                    "
                   >
-                    {technology}
+                    Web Development
                   </span>
-                ))}
-              </div>
 
-              <div className="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-[#080808]">
-
-                <div className="flex h-10 items-center gap-2 border-b border-white/10 px-4">
-                  <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
-
-                  <div className="ml-3 flex-1 rounded-md border border-white/5 bg-white/[0.03] px-3 py-1 text-[10px] text-gray-600">
-                    brodoak hotels
-                  </div>
+                  <span className="text-sm text-gray-600">
+                    03
+                  </span>
                 </div>
 
-                <div className="p-5">
+                <h3 className="mt-7 text-2xl font-semibold">
+                  BRODOAK Hotels
+                </h3>
 
-                  <div className="flex items-center justify-between">
-                    <div className="h-3 w-24 rounded bg-orange-400/10" />
+                <p className="mt-4 leading-7 text-gray-400">
+                  Hotel web application focused on presenting hotel
+                  information through a structured and responsive web
+                  experience.
+                </p>
 
-                    <div className="hidden gap-4 sm:flex">
-                      <span className="h-2 w-10 rounded bg-white/5" />
-                      <span className="h-2 w-10 rounded bg-white/5" />
-                      <span className="h-2 w-10 rounded bg-white/5" />
-                    </div>
-                  </div>
-
-                  <div className="mt-6 overflow-hidden rounded-xl border border-white/5 bg-white/[0.02]">
-
-                    <div className="relative h-40 bg-gradient-to-br from-orange-400/10 via-white/[0.02] to-transparent">
-
-                      <div className="absolute inset-x-6 bottom-6">
-                        <div className="h-3 w-40 rounded bg-white/10" />
-                        <div className="mt-3 h-2 w-56 rounded bg-white/5" />
-                        <div className="mt-5 h-8 w-28 rounded-lg bg-orange-400/10" />
-                      </div>
-
-                    </div>
-                  </div>
-
-                  <div className="mt-4 grid gap-3 sm:grid-cols-3">
-
-                    {[1, 2, 3].map((item) => (
-                      <div
-                        key={item}
-                        className="rounded-xl border border-white/5 bg-white/[0.02] p-3"
-                      >
-                        <div className="h-16 rounded-lg bg-white/[0.03]" />
-
-                        <div className="mt-3 h-2 w-20 rounded bg-white/10" />
-
-                        <div className="mt-2 h-2 w-14 rounded bg-white/5" />
-                      </div>
-                    ))}
-
-                  </div>
+                <div className="mt-7 flex flex-wrap gap-2">
+                  {[
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "Web Development",
+                  ].map((tech) => (
+                    <span
+                      key={tech}
+                      className="
+                        rounded-full
+                        border
+                        border-white/10
+                        bg-white/[0.02]
+                        px-3
+                        py-1.5
+                        text-xs
+                        text-gray-500
+                      "
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
+
+                <div className="mt-8">
+                  <a
+                    href="https://github.com/shaikyasirahmed07/BRODOAK-HOTELS"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                      text-sm
+                      font-medium
+                      text-gray-400
+                      transition
+                      hover:text-white
+                    "
+                  >
+                    View on GitHub ↗
+                  </a>
+                </div>
+
               </div>
+            </motion.article>
 
-              {/* REAL REPOSITORY */}
-              <div className="mt-8 flex flex-wrap gap-4">
 
-                <a
-                  href="https://github.com/shaikyasirahmed07/BRODOAK-HOTELS"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-full border border-white/10 px-5 py-2.5 text-sm font-medium text-gray-300 transition hover:border-white/20 hover:bg-white/5 hover:text-white"
-                >
-                  GitHub ↗
-                </a>
+            {/* =================================================
+                WATER BILL MANAGEMENT
+            ================================================= */}
+            <motion.article
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="
+                group
+                relative
+                overflow-hidden
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/[0.02]
+                p-7
+                transition-all
+                duration-500
+                hover:-translate-y-1
+                hover:border-cyan-400/30
+                sm:p-8
+              "
+            >
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  -right-24
+                  -top-24
+                  h-64
+                  w-64
+                  rounded-full
+                  bg-cyan-500/10
+                  blur-[90px]
+                "
+              />
+
+              <div className="relative">
+
+                <div className="flex items-center justify-between">
+                  <span
+                    className="
+                      rounded-full
+                      border
+                      border-cyan-400/20
+                      bg-cyan-400/5
+                      px-3
+                      py-1
+                      text-xs
+                      font-medium
+                      text-cyan-400
+                    "
+                  >
+                    Blockchain
+                  </span>
+
+                  <span className="text-sm text-gray-600">
+                    04
+                  </span>
+                </div>
+
+                <h3 className="mt-7 text-2xl font-semibold">
+                  Water Bill Management
+                </h3>
+
+                <p className="mt-4 leading-7 text-gray-400">
+                  Blockchain-based water billing application exploring
+                  decentralized billing and payment workflows through a
+                  web-based interface.
+                </p>
+
+                <div className="mt-7 flex flex-wrap gap-2">
+                  {[
+                    "Solidity",
+                    "React",
+                    "Ethers.js",
+                    "Blockchain",
+                    "Web3",
+                  ].map((tech) => (
+                    <span
+                      key={tech}
+                      className="
+                        rounded-full
+                        border
+                        border-white/10
+                        bg-white/[0.02]
+                        px-3
+                        py-1.5
+                        text-xs
+                        text-gray-500
+                      "
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="mt-8">
+                  <a
+                    href="https://github.com/shaikyasirahmed07/Water-bill-management"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                      text-sm
+                      font-medium
+                      text-gray-400
+                      transition
+                      hover:text-white
+                    "
+                  >
+                    View on GitHub ↗
+                  </a>
+                </div>
 
               </div>
             </motion.article>
 
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* =================================================
-          SKILLS
-      ================================================= */}
-
-      <section
-        id="skills"
-        className="mx-auto max-w-6xl px-6 py-32"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        {/* =================================================
+            SKILLS
+        ================================================= */}
+        <section
+          id="skills"
+          className="mx-auto max-w-6xl px-6 py-32"
         >
-          <p className="text-sm uppercase tracking-[0.2em] text-blue-400">
-            Skills
-          </p>
+          {/* Section heading */}
+          <div className="max-w-2xl">
+            <p className="text-sm uppercase tracking-[0.2em] text-blue-400">
+              Skills
+            </p>
 
-          <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
-            Tools I use to build.
-          </h2>
+            <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
+              Tools I work with.
+            </h2>
 
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-400">
-            A combination of programming languages, frameworks,
-            databases, and development tools I've worked with
-            across academic, personal, and professional projects.
-          </p>
-
-          <div className="mt-16 grid gap-5 md:grid-cols-2">
-
-            <SkillGroup
-              title="Languages"
-              skills={[
-                "Java",
-                "Python",
-                "JavaScript",
-                "TypeScript",
-                "C",
-                "SQL",
-              ]}
-            />
-
-            <SkillGroup
-              title="Frontend"
-              skills={[
-                "React",
-                "Next.js",
-                "HTML",
-                "CSS",
-                "Tailwind CSS",
-              ]}
-            />
-
-            <SkillGroup
-              title="Backend"
-              skills={[
-                "Spring Boot",
-                "Node.js",
-                "Express.js",
-                "Django",
-                "Flask",
-                "REST APIs",
-              ]}
-            />
-
-            <SkillGroup
-              title="Databases"
-              skills={[
-                "PostgreSQL",
-                "MongoDB",
-                "MySQL",
-                "SQL",
-              ]}
-            />
-
-            <SkillGroup
-              title="Other Technologies"
-              skills={[
-                "Solidity",
-                "Ethers.js",
-                "Git",
-                "GitHub",
-                "Linux",
-              ]}
-            />
-
-            <SkillGroup
-              title="Tools & Platforms"
-              skills={[
-                "Jira",
-                "Google Cloud",
-                "Microsoft Azure",
-                "Git",
-                "GitHub",
-              ]}
-            />
-
+            <p className="mt-5 text-lg leading-8 text-gray-400">
+              A practical technology stack built through academic work,
+              personal projects, and professional experience.
+            </p>
           </div>
-        </motion.div>
-      </section>
 
-      {/* =================================================
-          CERTIFICATIONS
-      ================================================= */}
+          {/* Skills grid */}
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-      <section
-        id="certifications"
-        className="mx-auto max-w-6xl px-6 py-32"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <p className="text-sm uppercase tracking-[0.2em] text-blue-400">
-            Certifications
-          </p>
-
-          <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
-            Continuous learning.
-          </h2>
-
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-400">
-            Certifications and credentials that complement my
-            software engineering and cloud technology skills.
-          </p>
-
-          <div className="mt-16 grid gap-5 md:grid-cols-2">
-
-            {/* Google Cloud */}
-            <motion.article
-              initial={{ opacity: 0, y: 20 }}
+            {/* Languages */}
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-blue-400/30"
+              className="
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/[0.02]
+                p-7
+                transition-all
+                duration-300
+                hover:border-blue-400/30
+              "
             >
-              <div className="flex items-start justify-between gap-5">
+              <p className="text-sm uppercase tracking-[0.15em] text-gray-500">
+                Languages
+              </p>
 
-                <div>
-                  <p className="text-xs uppercase tracking-[0.15em] text-gray-600">
-                    Google Cloud
-                  </p>
-
-                  <h3 className="mt-3 text-xl font-semibold text-gray-200">
-                    Associate Cloud Engineer
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-gray-500">
-                    Google Cloud certification focused on cloud
-                    infrastructure, deployment, and application
-                    management.
-                  </p>
-                </div>
-
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-blue-400/20 bg-blue-400/5 text-blue-400">
-                  GCP
-                </div>
-
+              <div className="mt-6 flex flex-wrap gap-3">
+                {[
+                  "Java",
+                  "Python",
+                  "JavaScript",
+                  "C",
+                  "SQL",
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="
+                      rounded-xl
+                      border
+                      border-white/10
+                      bg-white/[0.03]
+                      px-4
+                      py-2
+                      text-sm
+                      text-gray-300
+                    "
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
-            </motion.article>
+            </motion.div>
 
-            {/* HackerRank */}
-            <motion.article
-              initial={{ opacity: 0, y: 20 }}
+
+            {/* Frontend */}
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-green-400/30"
+              className="
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/[0.02]
+                p-7
+                transition-all
+                duration-300
+                hover:border-blue-400/30
+              "
             >
-              <div className="flex items-start justify-between gap-5">
+              <p className="text-sm uppercase tracking-[0.15em] text-gray-500">
+                Frontend
+              </p>
 
-                <div>
-                  <p className="text-xs uppercase tracking-[0.15em] text-gray-600">
-                    HackerRank
-                  </p>
-
-                  <h3 className="mt-3 text-xl font-semibold text-gray-200">
-                    Problem Solving
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-gray-500">
-                    Demonstrates problem-solving and programming
-                    skills through algorithmic challenges.
-                  </p>
-                </div>
-
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-green-400/20 bg-green-400/5 text-sm font-semibold text-green-400">
-                  HR
-                </div>
-
+              <div className="mt-6 flex flex-wrap gap-3">
+                {[
+                  "React",
+                  "Next.js",
+                  "HTML",
+                  "CSS",
+                  "Tailwind CSS",
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="
+                      rounded-xl
+                      border
+                      border-white/10
+                      bg-white/[0.03]
+                      px-4
+                      py-2
+                      text-sm
+                      text-gray-300
+                    "
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
-            </motion.article>
+            </motion.div>
 
-            {/* Automation Anywhere */}
-            <motion.article
-              initial={{ opacity: 0, y: 20 }}
+
+            {/* Backend */}
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-purple-400/30"
+              className="
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/[0.02]
+                p-7
+                transition-all
+                duration-300
+                hover:border-blue-400/30
+              "
             >
-              <div className="flex items-start justify-between gap-5">
+              <p className="text-sm uppercase tracking-[0.15em] text-gray-500">
+                Backend
+              </p>
 
-                <div>
-                  <p className="text-xs uppercase tracking-[0.15em] text-gray-600">
-                    Automation Anywhere
-                  </p>
-
-                  <h3 className="mt-3 text-xl font-semibold text-gray-200">
-                    RPA Essentials for Students
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-gray-500">
-                    Credential covering foundational robotic
-                    process automation concepts and Automation 360.
-                  </p>
-                </div>
-
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-purple-400/20 bg-purple-400/5 text-xs font-semibold text-purple-400">
-                  RPA
-                </div>
-
+              <div className="mt-6 flex flex-wrap gap-3">
+                {[
+                  "Spring Boot",
+                  "Django",
+                  "Flask",
+                  "Node.js",
+                  "Express.js",
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="
+                      rounded-xl
+                      border
+                      border-white/10
+                      bg-white/[0.03]
+                      px-4
+                      py-2
+                      text-sm
+                      text-gray-300
+                    "
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
-            </motion.article>
+            </motion.div>
 
-            {/* Azure */}
-            <motion.article
-              initial={{ opacity: 0, y: 20 }}
+
+            {/* Databases */}
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-cyan-400/30"
+              className="
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/[0.02]
+                p-7
+                transition-all
+                duration-300
+                hover:border-blue-400/30
+              "
             >
-              <div className="flex items-start justify-between gap-5">
+              <p className="text-sm uppercase tracking-[0.15em] text-gray-500">
+                Databases
+              </p>
 
-                <div>
-                  <p className="text-xs uppercase tracking-[0.15em] text-gray-600">
-                    Microsoft
-                  </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                {[
+                  "PostgreSQL",
+                  "MongoDB",
+                  "SQL",
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="
+                      rounded-xl
+                      border
+                      border-white/10
+                      bg-white/[0.03]
+                      px-4
+                      py-2
+                      text-sm
+                      text-gray-300
+                    "
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
 
-                  <h3 className="mt-3 text-xl font-semibold text-gray-200">
-                    Microsoft Azure
-                  </h3>
 
-                  <p className="mt-2 text-sm leading-6 text-gray-500">
-                    Cloud technology credential covering Microsoft
-                    Azure fundamentals and services.
-                  </p>
+            {/* Cloud & Tools */}
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/[0.02]
+                p-7
+                transition-all
+                duration-300
+                hover:border-blue-400/30
+              "
+            >
+              <p className="text-sm uppercase tracking-[0.15em] text-gray-500">
+                Cloud & Tools
+              </p>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                {[
+                  "Google Cloud",
+                  "Azure",
+                  "Git",
+                  "GitHub",
+                  "Jira",
+                  "Linux",
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="
+                      rounded-xl
+                      border
+                      border-white/10
+                      bg-white/[0.03]
+                      px-4
+                      py-2
+                      text-sm
+                      text-gray-300
+                    "
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+
+
+            {/* Other */}
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/[0.02]
+                p-7
+                transition-all
+                duration-300
+                hover:border-blue-400/30
+              "
+            >
+              <p className="text-sm uppercase tracking-[0.15em] text-gray-500">
+                Other
+              </p>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                {[
+                  "REST APIs",
+                  "Blockchain",
+                  "Web3",
+                  "TensorFlow",
+                  "Problem Solving",
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="
+                      rounded-xl
+                      border
+                      border-white/10
+                      bg-white/[0.03]
+                      px-4
+                      py-2
+                      text-sm
+                      text-gray-300
+                    "
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+
+          </div>
+        </section>
+
+        {/* =================================================
+            CERTIFICATIONS & EDUCATION
+        ================================================= */}
+        <section
+          id="education"
+          className="mx-auto max-w-6xl px-6 py-32"
+        >
+          {/* Section heading */}
+          <div className="max-w-2xl">
+            <p className="text-sm uppercase tracking-[0.2em] text-blue-400">
+              Background
+            </p>
+
+            <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
+              Education & certifications.
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-gray-400">
+              Academic foundation and certifications supporting my technical
+              journey.
+            </p>
+          </div>
+
+          <div className="mt-16 grid gap-6 lg:grid-cols-2">
+
+            {/* =================================================
+                EDUCATION
+            ================================================= */}
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/[0.02]
+                p-7
+                sm:p-8
+              "
+            >
+              <p className="text-sm uppercase tracking-[0.15em] text-gray-500">
+                Education
+              </p>
+
+              <div className="mt-8">
+
+                <div className="flex items-start justify-between gap-5">
+                  <div>
+                    <h3 className="text-xl font-semibold">
+                      B.Tech — Computer Science & Engineering
+                    </h3>
+
+                    <p className="mt-2 text-gray-400">
+                      KL University
+                    </p>
+                  </div>
+
+                  <span className="shrink-0 text-sm text-gray-600">
+                    2022 — 2026
+                  </span>
                 </div>
 
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-cyan-400/20 bg-cyan-400/5 text-xs font-semibold text-cyan-400">
-                  AZ
+                <div className="mt-6 h-px bg-white/10" />
+
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-gray-500">
+                    Computer Science
+                  </span>
+
+                  <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-gray-500">
+                    Software Development
+                  </span>
+
+                  <span className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-gray-500">
+                    Full Stack Development
+                  </span>
                 </div>
 
               </div>
-            </motion.article>
+            </motion.div>
+
+
+            {/* =================================================
+                CERTIFICATIONS
+            ================================================= */}
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/[0.02]
+                p-7
+                sm:p-8
+              "
+            >
+              <p className="text-sm uppercase tracking-[0.15em] text-gray-500">
+                Certifications
+              </p>
+
+              <div className="mt-8 space-y-6">
+
+                {/* Google Cloud */}
+                <div className="group">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <h3 className="font-medium text-white">
+                        Associate Cloud Engineer
+                      </h3>
+
+                      <p className="mt-1 text-sm text-gray-500">
+                        Google Cloud
+                      </p>
+                    </div>
+
+                    <span className="text-xs text-gray-600">
+                      Cloud
+                    </span>
+                  </div>
+                </div>
+
+
+                {/* HackerRank */}
+                <div className="border-t border-white/10 pt-6">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <h3 className="font-medium text-white">
+                        Problem Solving
+                      </h3>
+
+                      <p className="mt-1 text-sm text-gray-500">
+                        HackerRank
+                      </p>
+                    </div>
+
+                    <span className="text-xs text-gray-600">
+                      Programming
+                    </span>
+                  </div>
+                </div>
+
+
+                {/* Automation Anywhere */}
+                <div className="border-t border-white/10 pt-6">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <h3 className="font-medium text-white">
+                        RPA Essentials for Students
+                      </h3>
+
+                      <p className="mt-1 text-sm text-gray-500">
+                        Automation Anywhere
+                      </p>
+                    </div>
+
+                    <span className="text-xs text-gray-600">
+                      RPA
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+            </motion.div>
 
           </div>
-        </motion.div>
-      </section>
+        </section>
 
-      {/* =================================================
-          CONTACT
-      ================================================= */}
-
-      <section
-        id="contact"
-        className="mx-auto max-w-6xl px-6 py-32"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="
-            relative
-            overflow-hidden
-            rounded-3xl
-            border
-            border-white/10
-            bg-white/[0.02]
-            p-8
-            sm:p-12
-            lg:p-16
-          "
+        {/* =================================================
+            CONTACT
+        ================================================= */}
+        <section
+          id="contact"
+          className="mx-auto max-w-6xl px-6 py-32"
         >
-
           <div
             className="
-              pointer-events-none
-              absolute
-              left-1/2
-              top-1/2
-              h-96
-              w-96
-              -translate-x-1/2
-              -translate-y-1/2
-              rounded-full
-              bg-blue-500/10
-              blur-[120px]
+              relative
+              overflow-hidden
+              rounded-3xl
+              border
+              border-white/10
+              bg-white/[0.02]
+              px-7
+              py-14
+              sm:px-12
+              sm:py-16
             "
-          />
+          >
+            {/* Background glow */}
+            <div
+              className="
+                pointer-events-none
+                absolute
+                left-1/2
+                top-0
+                h-80
+                w-80
+                -translate-x-1/2
+                rounded-full
+                bg-blue-500/10
+                blur-[120px]
+              "
+            />
 
-          <div className="relative text-center">
+            <div className="relative mx-auto max-w-3xl text-center">
 
-            <p className="text-sm uppercase tracking-[0.2em] text-blue-400">
-              Contact
-            </p>
+              <p className="text-sm uppercase tracking-[0.2em] text-blue-400">
+                Contact
+              </p>
 
-            <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-              Let's build something useful.
-            </h2>
+              <h2 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+                Let's build something
+                <span className="text-gray-500"> together.</span>
+              </h2>
 
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-400">
-              I'm open to software engineering opportunities,
-              interesting projects, and conversations around
-              technology and development.
-            </p>
+              <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-400">
+                I'm open to opportunities, collaborations, and interesting
+                software projects. Feel free to reach out if you'd like to
+                connect.
+              </p>
 
-            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              {/* Contact buttons */}
+              <div className="mt-10 flex flex-wrap justify-center gap-4">
 
-              <a
-                href="mailto:shaikyasirahmed07@gmail.com"
-                className="
-                  group
-                  inline-flex
-                  items-center
-                  gap-2
-                  rounded-full
-                  bg-white
-                  px-6
-                  py-3
-                  font-medium
-                  text-black
-                  transition
-                  hover:bg-gray-200
-                "
-              >
-                Get in touch
-
-                <ArrowUpRight
-                  size={17}
+                <a
+                  href="mailto:shaikyasirahmed07@gmail.com"
                   className="
-                    transition-transform
-                    group-hover:translate-x-0.5
-                    group-hover:-translate-y-0.5
+                    group
+                    flex
+                    items-center
+                    gap-2
+                    rounded-full
+                    bg-white
+                    px-6
+                    py-3
+                    font-medium
+                    text-black
+                    transition
+                    hover:bg-gray-200
                   "
-                />
-              </a>
+                >
+                  Send me an email
+
+                  <ArrowUpRight
+                    size={17}
+                    className="
+                      transition-transform
+                      group-hover:translate-x-0.5
+                      group-hover:-translate-y-0.5
+                    "
+                  />
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/shaikyasirahmed07/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+                    flex
+                    items-center
+                    gap-2
+                    rounded-full
+                    border
+                    border-white/15
+                    px-6
+                    py-3
+                    font-medium
+                    text-white
+                    transition
+                    hover:border-white/30
+                    hover:bg-white/5
+                  "
+                >
+                  LinkedIn ↗
+                </a>
+
+              </div>
+
+              {/* Email */}
+              <p className="mt-8 text-sm text-gray-600">
+                shaikyasirahmed07@gmail.com
+              </p>
+
+            </div>
+          </div>
+        </section>
+
+
+        {/* =================================================
+            FOOTER
+        ================================================= */}
+        <footer className="border-t border-white/10">
+          <div
+            className="
+              mx-auto
+              flex
+              max-w-6xl
+              flex-col
+              gap-5
+              px-6
+              py-8
+              sm:flex-row
+              sm:items-center
+              sm:justify-between
+            "
+          >
+
+            {/* Copyright */}
+            <p className="text-sm text-gray-600">
+              © {new Date().getFullYear()} Shaik Yasir Ahmed.
+              All rights reserved.
+            </p>
+
+            {/* Social links */}
+            <div className="flex items-center gap-5">
 
               <a
-                href="/Resume.pdf"
+                href="https://github.com/shaikyasirahmed07"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
-                  inline-flex
-                  items-center
-                  rounded-full
-                  border
-                  border-white/15
-                  px-6
-                  py-3
-                  font-medium
-                  text-white
+                  text-sm
+                  text-gray-500
                   transition
-                  hover:border-white/30
-                  hover:bg-white/5
+                  hover:text-white
                 "
               >
-                View Resume
+                GitHub
               </a>
 
-            </div>
-
-            <div className="mt-10 flex flex-col items-center gap-3 text-sm text-gray-500">
+              <a
+                href="https://www.linkedin.com/in/shaikyasirahmed07/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  text-sm
+                  text-gray-500
+                  transition
+                  hover:text-white
+                "
+              >
+                LinkedIn
+              </a>
 
               <a
                 href="mailto:shaikyasirahmed07@gmail.com"
-                className="transition hover:text-white"
+                className="
+                  text-sm
+                  text-gray-500
+                  transition
+                  hover:text-white
+                "
               >
-                shaikyasirahmed07@gmail.com
+                Email
               </a>
-
-              <span>
-                India
-              </span>
 
             </div>
 
           </div>
-        </motion.div>
-      </section>
-
-      {/* =================================================
-          FOOTER
-      ================================================= */}
-
-      <footer className="border-t border-white/10">
-
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-8 sm:flex-row sm:items-center sm:justify-between">
-
-          <div>
-            <p className="text-sm text-gray-500">
-              © {new Date().getFullYear()} Shaik Yasir Ahmed.
-            </p>
-
-            <p className="mt-1 text-xs text-gray-700">
-              Built with Next.js, React & Tailwind CSS.
-            </p>
-          </div>
-
-          <div className="flex items-center gap-5">
-
-            <a
-              href="https://github.com/shaikyasirahmed07"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 transition hover:text-white"
-            >
-              GitHub
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/shaikyasirahmed07/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 transition hover:text-white"
-            >
-              LinkedIn
-            </a>
-
-            <a
-              href="mailto:shaikyasirahmed07@gmail.com"
-              className="text-gray-500 transition hover:text-white"
-            >
-              Email
-            </a>
-
-          </div>
-        </div>
-
-      </footer>
+        </footer>
 
     </main>
   );
