@@ -1894,6 +1894,7 @@ export default function Home() {
               {/* Contact buttons */}
               <div className="mt-10 flex flex-wrap justify-center gap-4">
 
+                {/* Email */}
                 <a
                   href="mailto:shaikyasirahmed07@gmail.com"
                   className="
@@ -1923,11 +1924,13 @@ export default function Home() {
                   />
                 </a>
 
+                {/* LinkedIn */}
                 <a
                   href="https://www.linkedin.com/in/shaikyasirahmed07/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="
+                    group
                     flex
                     items-center
                     gap-2
@@ -1943,15 +1946,68 @@ export default function Home() {
                     hover:bg-white/5
                   "
                 >
-                  LinkedIn ↗
+                  LinkedIn
+
+                  <ArrowUpRight
+                    size={17}
+                    className="
+                      transition-transform
+                      group-hover:translate-x-0.5
+                      group-hover:-translate-y-0.5
+                    "
+                  />
+                </a>
+
+                {/* GitHub */}
+                <a
+                  href="https://github.com/shaikyasirahmed07"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+                    group
+                    flex
+                    items-center
+                    gap-2
+                    rounded-full
+                    border
+                    border-white/15
+                    px-6
+                    py-3
+                    font-medium
+                    text-white
+                    transition
+                    hover:border-white/30
+                    hover:bg-white/5
+                  "
+                >
+                  GitHub
+
+                  <ArrowUpRight
+                    size={17}
+                    className="
+                      transition-transform
+                      group-hover:translate-x-0.5
+                      group-hover:-translate-y-0.5
+                    "
+                  />
                 </a>
 
               </div>
 
               {/* Email */}
-              <p className="mt-8 text-sm text-gray-600">
+              <a
+                href="mailto:shaikyasirahmed07@gmail.com"
+                className="
+                  mt-8
+                  inline-block
+                  text-sm
+                  text-gray-600
+                  transition
+                  hover:text-gray-400
+                "
+              >
                 shaikyasirahmed07@gmail.com
-              </p>
+              </a>
 
             </div>
           </div>
