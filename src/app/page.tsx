@@ -1734,29 +1734,111 @@ export default function Home() {
 
               <div className="mt-8 space-y-6">
 
-                {/* Google Cloud */}
-                <div className="group">
+                {/* =================================================
+                    GOOGLE CLOUD
+                ================================================= */}
+                <a
+                  href="https://www.credly.com/badges/008d1182-11c8-4bc0-9a50-de89171630a3/public_url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block"
+                >
                   <div className="flex items-start justify-between gap-4">
+
                     <div>
-                      <h3 className="font-medium text-white">
+                      <h3 className="font-medium text-white transition-colors group-hover:text-blue-400">
                         Associate Cloud Engineer
                       </h3>
 
                       <p className="mt-1 text-sm text-gray-500">
                         Google Cloud
                       </p>
+
+                      <p className="mt-2 text-xs text-blue-400 opacity-0 transition-opacity group-hover:opacity-100">
+                        View Credential ↗
+                      </p>
                     </div>
 
                     <span className="text-xs text-gray-600">
                       Cloud
                     </span>
+
                   </div>
-                </div>
+                </a>
 
 
-                {/* HackerRank */}
+                {/* =================================================
+                    RED HAT
+                ================================================= */}
+                <a
+                  href="https://www.credly.com/badges/bbefff8e-25cd-4ce0-bcc6-8a8c17d35a89/public_url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block border-t border-white/10 pt-6"
+                >
+                  <div className="flex items-start justify-between gap-4">
+
+                    <div>
+                      <h3 className="font-medium text-white transition-colors group-hover:text-blue-400">
+                        Certified Specialist in Enterprise Application Development
+                      </h3>
+
+                      <p className="mt-1 text-sm text-gray-500">
+                        Red Hat
+                      </p>
+
+                      <p className="mt-2 text-xs text-blue-400 opacity-0 transition-opacity group-hover:opacity-100">
+                        View Credential ↗
+                      </p>
+                    </div>
+
+                    <span className="shrink-0 text-xs text-gray-600">
+                      Java
+                    </span>
+
+                  </div>
+                </a>
+
+
+                {/* =================================================
+                    AUTOMATION ANYWHERE
+                ================================================= */}
+                <a
+                  href="https://certificates.automationanywhere.com/8d192d31-dde3-4dbd-a2e1-079a4b7e246d"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block border-t border-white/10 pt-6"
+                >
+                  <div className="flex items-start justify-between gap-4">
+
+                    <div>
+                      <h3 className="font-medium text-white transition-colors group-hover:text-blue-400">
+                        RPA Essentials for Students
+                      </h3>
+
+                      <p className="mt-1 text-sm text-gray-500">
+                        Automation Anywhere
+                      </p>
+
+                      <p className="mt-2 text-xs text-blue-400 opacity-0 transition-opacity group-hover:opacity-100">
+                        View Credential ↗
+                      </p>
+                    </div>
+
+                    <span className="text-xs text-gray-600">
+                      RPA
+                    </span>
+
+                  </div>
+                </a>
+
+
+                {/* =================================================
+                    HACKERRANK
+                ================================================= */}
                 <div className="border-t border-white/10 pt-6">
                   <div className="flex items-start justify-between gap-4">
+
                     <div>
                       <h3 className="font-medium text-white">
                         Problem Solving
@@ -1770,26 +1852,7 @@ export default function Home() {
                     <span className="text-xs text-gray-600">
                       Programming
                     </span>
-                  </div>
-                </div>
 
-
-                {/* Automation Anywhere */}
-                <div className="border-t border-white/10 pt-6">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <h3 className="font-medium text-white">
-                        RPA Essentials for Students
-                      </h3>
-
-                      <p className="mt-1 text-sm text-gray-500">
-                        Automation Anywhere
-                      </p>
-                    </div>
-
-                    <span className="text-xs text-gray-600">
-                      RPA
-                    </span>
                   </div>
                 </div>
 
