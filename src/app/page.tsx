@@ -340,7 +340,7 @@ export default function Home() {
                 className="
                   flex
                   items-center
-                  gap-2
+                  gap-3
                   rounded-full
                   border
                   border-white/15
@@ -355,6 +355,8 @@ export default function Home() {
               >
                 Download Resume
               </a>
+
+
             </motion.div>
 
             {/* Social links */}
@@ -435,7 +437,7 @@ export default function Home() {
                 gap-8
                 border-t
                 border-white/10
-                pt-5
+                
                 text-sm
                 text-gray-500
               "
