@@ -5,8 +5,8 @@ This checklist records work required before the portfolio is described as produc
 ## Repository and security
 
 - [ ] Install dependencies from the lockfile with `npm ci`.
-- [ ] Run `npm audit`; assess each finding and document any accepted risk.
-- [ ] Run `npm run lint` and fix all actionable errors.
+- [ ] Run `npm audit`; assess each finding and document any accepted risk. The first CI install reported one critical vulnerability; identify the affected package and remediation before merging.
+- [ ] Re-run `npm run lint` after the apostrophe-escaping fix; confirm no errors remain.
 - [ ] Run `npm run build` and resolve production-build errors.
 - [ ] Confirm the GitHub Actions quality workflow runs successfully on this branch; adding the workflow does not itself mean any check has passed.
 - [ ] Review the full repository tree for API routes, server actions, credentials, and unexpected files.
@@ -57,4 +57,5 @@ Avoid purple/blue gradients or glows, pill-shaped buttons, fake reviews or metri
 - The App Router directory currently lists only `globals.css`, `icon.png`, `layout.tsx`, and `page.tsx`; no dedicated legal pages, `robots.ts`, or `sitemap.ts` appeared in that directory listing.
 - The repository's `AGENTS.md` requires reading the installed Next.js docs under `node_modules/next/dist/docs/` before writing application code. Follow this before making route or component changes.
 - A Vercel preview marked “Ready” confirms deployment status only; it does not prove functional correctness, accessibility, security, or launch readiness.
-- Lint, production build, dependency audit, secret-history scan, custom-domain verification, and full live-site testing have not yet been verified in this workflow.
+- First CI run: `npm ci` completed but reported one critical dependency vulnerability; `npm run lint` failed with seven `react/no-unescaped-entities` errors for apostrophes and one unused `SkillGroup` warning. Apostrophe entities have been fixed in the audit branch; rerun lint to confirm. The build and explicit `npm audit` steps were skipped after lint failed.
+- Production build, dependency remediation, secret-history scan, custom-domain verification, and full live-site testing remain unverified.
