@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shaik Yasir Ahmed | Software Engineer Portfolio
 
-## Getting Started
+Personal portfolio built with Next.js, React, TypeScript, Tailwind CSS, Framer Motion, and Lucide icons.
 
-First, run the development server:
+Live site: https://yasir-portfolio-pearl.vercel.app/
+
+## About
+
+The site presents my software engineering profile, experience, projects, technical skills, education, and contact links. It is intended to be a concise, accessible way to explore my work and background.
+
+## Tech stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- Framer Motion
+- Lucide React
+
+## Run locally
+
+Requirements: Node.js compatible with the installed Next.js version and npm.
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Quality checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run these from the repository root before proposing or merging changes:
 
-## Learn More
+```bash
+npm audit
+npm run lint
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Review the output of each command. Do not treat an audit as complete unless the commands finish successfully and any reported issues have been assessed.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+  app/
+    layout.tsx    # Root layout and site metadata
+    page.tsx      # Portfolio page
+    globals.css   # Global styles
+```
 
-## Deploy on Vercel
+## Contribution and deployment notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Make changes on a feature branch and review them in a pull request rather than committing directly to `main`.
+- Verify the preview deployment on desktop and mobile before merging.
+- Check navigation, external links, keyboard focus, reduced-motion behavior, page metadata, and response headers after changes.
+- Keep personal information and credentials out of source control.
+- The custom domain, legal pages, security review, accessibility review, and production checks must be verified separately before describing the site as launch-ready.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+No open-source license is currently declared. Unless a license is added, the repository should not be assumed to grant permission to reuse its code.
