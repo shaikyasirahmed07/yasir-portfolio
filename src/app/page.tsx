@@ -138,7 +138,7 @@ export default function Home() {
               md:block
             "
           >
-            Let's Talk
+            Let&apos;s Talk
           </a>
 
           {/* Mobile menu button */}
@@ -271,7 +271,7 @@ export default function Home() {
                 lg:text-8xl
               "
             >
-              Hi, I'm
+              Hi, I&apos;m
               <br />
               <span className="text-gray-400">
                 Shaik Yasir Ahmed.
@@ -502,7 +502,7 @@ export default function Home() {
 
             <div className="space-y-6 text-lg leading-8 text-gray-400">
               <p>
-                I'm a Computer Science and Engineering graduate with
+                I&apos;m a Computer Science and Engineering graduate with
                 professional experience as an Associate Process Executive
                 at upGrad Education Pvt. Ltd., working on a client project
                 for NVIDIA Graphics Private Limited.
@@ -777,7 +777,7 @@ export default function Home() {
             </p>
 
             <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
-              Things I've built.
+              Things I&apos;ve built.
             </h2>
 
             <p className="mt-5 text-lg leading-8 text-gray-400">
@@ -1883,13 +1883,13 @@ export default function Home() {
               </p>
 
               <h2 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                Let's build something
+                Let&apos;s build something
                 <span className="text-gray-500"> together.</span>
               </h2>
 
               <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-400">
-                I'm open to opportunities, collaborations, and interesting
-                software projects. Feel free to reach out if you'd like to
+                I&apos;m open to opportunities, collaborations, and interesting
+                software projects. Feel free to reach out if you&apos;d like to
                 connect.
               </p>
 
