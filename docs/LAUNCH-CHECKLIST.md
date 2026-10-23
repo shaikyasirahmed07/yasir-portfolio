@@ -8,6 +8,7 @@ This checklist records work required before the portfolio is described as produc
 - [ ] Run `npm audit`; assess each finding and document any accepted risk.
 - [ ] Run `npm run lint` and fix all actionable errors.
 - [ ] Run `npm run build` and resolve production-build errors.
+- [ ] Confirm the GitHub Actions quality workflow runs successfully on this branch; adding the workflow does not itself mean any check has passed.
 - [ ] Review the full repository tree for API routes, server actions, credentials, and unexpected files.
 - [ ] Review current and historical Git content for accidentally committed secrets; ignoring environment files does not remove secrets from history.
 - [ ] Verify the response headers on a deployed preview and ensure they do not break legitimate functionality.
@@ -18,6 +19,7 @@ This checklist records work required before the portfolio is described as produc
 
 - [ ] Confirm the intended custom domain and verify its DNS and HTTPS status.
 - [ ] Set canonical, Open Graph, and social-card URLs to the verified production domain.
+- [ ] Add and verify an Open Graph/social-card image if using `summary_large_image`; do not point metadata at a missing asset.
 - [ ] Confirm the favicon appears correctly on the deployed site and optimize the current 1.35 MB PNG if a smaller equivalent can be produced without loss.
 - [ ] Verify the resume download target exists and opens the intended current file.
 - [ ] Check all social links, project links, email links, and in-page anchors.
@@ -50,7 +52,8 @@ Avoid purple/blue gradients or glows, pill-shaped buttons, fake reviews or metri
 
 - The home page is a large client component with frequent Framer Motion usage.
 - Existing styling uses blue/purple/cyan accents and many rounded cards/chips, which conflicts with the requested visual direction.
-- Root metadata currently references the Vercel deployment URL.
+- Root metadata currently references the Vercel deployment URL and uses `summary_large_image` without a declared social image.
+- A GitHub Actions workflow now exists at `.github/workflows/quality.yml` on `security/foundation-audit`; its execution result has not yet been verified.
 - The App Router directory currently lists only `globals.css`, `icon.png`, `layout.tsx`, and `page.tsx`; no dedicated legal pages, `robots.ts`, or `sitemap.ts` appeared in that directory listing.
 - The repository's `AGENTS.md` requires reading the installed Next.js docs under `node_modules/next/dist/docs/` before writing application code. Follow this before making route or component changes.
 - A Vercel preview marked “Ready” confirms deployment status only; it does not prove functional correctness, accessibility, security, or launch readiness.
