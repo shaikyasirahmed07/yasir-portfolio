@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {ArrowDown,ArrowUpRight} from "lucide-react";
+import {ArrowDown,ArrowUpRight,Download} from "lucide-react";
 export function HeroSection(){return <section className="hero" id="home">
   <div className="starfield" aria-hidden="true"/>
   <div className="hero-bgword" aria-hidden="true">PORTFOLIO</div>
@@ -8,7 +8,12 @@ export function HeroSection(){return <section className="hero" id="home">
     <p className="hello">Hello, I&apos;m</p><h1>YASIR<span>.</span></h1>
     <h2>SOFTWARE<br/>DEVELOPER</h2>
     <p className="hero-desc">I build thoughtful digital products by bringing together clean engineering, purposeful design and curiosity.</p>
-    <a className="solid-btn" href="#work">EXPLORE MY WORK <ArrowUpRight size={14}/></a>
+    <div className="hero-actions" style={{display:"flex",flexWrap:"wrap",gap:"10px"}}>
+      <a className="solid-btn" href="#work">EXPLORE MY WORK <ArrowUpRight size={14}/></a>
+      <a className="solid-btn" href="https://drive.google.com/file/d/1XpVNXZ1nGsAZOXSGVe8kWrG0aRPMIhLp/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="View or download Yasir Ahmed's resume">
+        DOWNLOAD RESUME <Download size={14}/>
+      </a>
+    </div>
   </div>
   <div className="portrait-wrap">
     <div className="portrait-aura"/><div className="portrait-orbit orbit-one"/><div className="portrait-orbit orbit-two"/><div className="portrait-orbit orbit-three"/>
