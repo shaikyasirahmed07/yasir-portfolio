@@ -2,7 +2,7 @@ import Image from "next/image";
 import {ArrowDown,ArrowUpRight,Download} from "lucide-react";
 export function HeroSection(){return <section className="hero" id="home">
   <div className="starfield" aria-hidden="true"/>
-  <div className="hero-bgword" aria-hidden="true">PORTFOLIO</div>
+  <div className="hero-bgword" aria-hidden="true">P O R T F O L I O</div>
   <div className="hero-left">
     <p className="eyebrow"><i/> SOFTWARE DEVELOPER &amp; PRODUCT BUILDER</p>
     <p className="hello">Hello, I&apos;m</p><h1>YASIR<span>.</span></h1>
